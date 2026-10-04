@@ -1,7 +1,7 @@
 export interface CatalogItem {
     id: string;
     name: string;
-    category: 'curtains' | 'blinds' | 'specialty';
+    category: 'blinds' | 'curtains' | 'mosquito_nets' | 'wall_interior' | 'flooring' | string;
     description: string;
     image: string;
     badge?: string;
@@ -68,107 +68,140 @@ export const BUSINESS_DATA: BusinessInfo = {
 
 export const CATALOG_ITEMS: CatalogItem[] = [
     {
-        id: "pleated-curtains",
-        name: "Pleated Curtains",
-        category: "curtains",
-        description: "Tailored architectural drapes with precision folds, creating structured, timeless luxury for living and bed chambers.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-10-241_com.whatsapp.w4b.jpg",
-        badge: "Bestseller",
-        features: ["Double & Triple Pinch Pleat", "Custom Drop Heights", "Thermal Lining Available"]
-    },
-    {
-        id: "ripple-curtains",
-        name: "Ripple Curtains",
-        category: "curtains",
-        description: "Flowing S-fold curtains suspended from ultra-slim ceilings tracks for a fluid modern aesthetic.",
-        image: "/gallery/Screenshot_2026-09-27-20-35-50-528_com.whatsapp.w4b.jpg",
-        badge: "Architectural Favorite",
-        features: ["Seamless S-Wave Movement", "Ceiling-Mounted Track", "Sheer & Blackout Options"]
+        id: "zebra-blinds",
+        name: "Zebra Blinds",
+        category: "blinds",
+        description: "Dual-layered light control fabrics offering effortless transitions between transparent view and privacy.",
+        image: "/service/1.png",
+        badge: "Popular Choice",
+        features: ["Dual Layer Precision", "Light Dimming Control", "Dust Resistant Weave"]
     },
     {
         id: "roller-blinds",
         name: "Roller Blinds",
         category: "blinds",
         description: "Sleek, minimalist window coverings engineered for solar control, glare reduction, and clean interior lines.",
-        image: "/gallery/Screenshot_2026-09-27-20-35-56-060_com.whatsapp.w4b.jpg",
+        image: "/service/2.png",
         features: ["Sunscreen 1%-5% Openness", "Total Blackout Series", "Moisture Resistant"]
-    },
-    {
-        id: "zeebra-blinds",
-        name: "Zebra Blinds",
-        category: "blinds",
-        description: "Dual-layered light control fabrics offering effortless transitions between transparent view and absolute privacy.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-42-708_com.whatsapp.w4b.jpg",
-        badge: "Popular Choice",
-        features: ["Dual Layer Precision", "Light Dimming Control", "Dust Resistant Weave"]
     },
     {
         id: "roman-blinds",
         name: "Roman Blinds",
         category: "blinds",
         description: "Soft fabric shades that stack neatly into uniform horizontal pleats, bringing classic warmth to modern frames.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-15-616_com.whatsapp.w4b.jpg",
+        image: "/service/3.png",
         features: ["Cascading Fabric Folds", "Manual or Motorised", "Extensive Fabric Palette"]
+    },
+    {
+        id: "venetian-blinds",
+        name: "Venetian Blinds",
+        category: "blinds",
+        description: "Classic horizontal louvred blinds providing precise direction control of light and airflow.",
+        image: "/service/4.png",
+        features: ["Adjustable Louvre Tilt", "Aluminium & Timber Slat Options", "Easy Wipe Clean"]
+    },
+    {
+        id: "wooden-blinds",
+        name: "Wooden Blinds",
+        category: "blinds",
+        description: "Rich natural timber slats offering organic warmth, luxury texture, and sturdy architectural light management.",
+        image: "/service/5.png",
+        badge: "Premium Timber",
+        features: ["100% Real Hardwood Slats", "UV Protective Coating", "Custom Stain Finishes"]
     },
     {
         id: "honeycomb-blinds",
         name: "Honeycomb Blinds",
         category: "blinds",
         description: "Cellular structure engineered for superior acoustic absorption and energy-efficient thermal insulation.",
-        image: "/images/showcase/showcase-blinds.webp",
+        image: "/service/6.png",
         badge: "Energy Saver",
         features: ["Cellular Insulation", "Sound Dampening", "Top-Down Bottom-Up"]
     },
     {
-        id: "vertical-blinds",
-        name: "Vertical Blinds",
-        category: "blinds",
-        description: "Linear vertical louvres ideal for large glass facade openings and floor-to-ceiling balcony glazing.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-12-302_com.whatsapp.w4b.jpg",
-        features: ["180 Degree Rotation", "Ideal for Wide Windows", "Easy Maintenance"]
-    },
-    {
         id: "balcony-blinds",
-        name: "Balcony Blinds (PVC & Bamboo)",
-        category: "specialty",
+        name: "Balcony Blinds",
+        category: "blinds",
         description: "Weatherproof exterior shielding crafted from treated bamboo and reinforced PVC for tropical balcony outdoor living.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-21-411_com.whatsapp.w4b.jpg",
+        image: "/service/7.png",
         badge: "Weatherproof",
-        features: ["Rain & UV Resistance", "Natural Bamboo / PVC", "Heavy Duty Crank Mechanism"]
+        features: ["Rain & UV Resistance", "Heavy Duty Crank Mechanism", "Wind Resistant Track"]
     },
     {
-        id: "sliding-mosquito-net",
-        name: "Sliding Mosquito Net",
-        category: "specialty",
-        description: "High-grade aluminium track mosquito net systems featuring pleated mesh for insect defense without sacrificing airflow.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-33-809_com.whatsapp.w4b.jpg",
-        badge: "Essential Comfort",
-        features: ["Pleated Mesh Technology", "Slim Aluminium Profile", "Smooth Lateral Glide"]
+        id: "ripple-fold-curtains",
+        name: "Ripple Fold Curtains",
+        category: "curtains",
+        description: "Flowing S-fold drapes suspended from ultra-slim ceiling tracks for a fluid modern architectural aesthetic.",
+        image: "/service/8.png",
+        badge: "Architectural Favorite",
+        features: ["Seamless S-Wave Movement", "Ceiling-Mounted Track", "Sheer & Blackout Options"]
     },
     {
-        id: "floor-mats-carpets",
-        name: "Floor Mats & Carpets",
-        category: "specialty",
-        description: "Curated collection of high-density accent floor runners and custom area carpets to anchor your interior spaces.",
-        image: "/gallery/Screenshot_2026-09-27-20-34-37-547_com.whatsapp.w4b.jpg",
-        features: ["Custom Dimensions", "Anti-Skid Backing", "Stain Guard Treatment"]
+        id: "pleated-curtains",
+        name: "Pleated Curtains",
+        category: "curtains",
+        description: "Tailored architectural drapes with precision folds, creating structured, timeless luxury for living and bed chambers.",
+        image: "/service/9.png",
+        badge: "Bestseller",
+        features: ["Double & Triple Pinch Pleat", "Custom Drop Heights", "Thermal Lining Available"]
     },
     {
-        id: "motorised-solutions",
-        name: "Motorised Curtains & Blinds",
-        category: "specialty",
-        description: "Smart automation motors with silent actuation, smartphone control, and remote integration for effortless comfort.",
-        image: "/images/showcase/showcase-motorised.webp",
+        id: "double-height-curtains",
+        name: "Double-Height Curtains",
+        category: "curtains",
+        description: "Dramatic floor-to-ceiling drapery designed for grand double-height living rooms and atrium glazing.",
+        image: "/service/10.png",
+        features: ["Heavy Duty Motorised Track", "Grand Vertical Proportion", "Acoustic Noise Reduction"]
+    },
+    {
+        id: "motorized-curtains",
+        name: "Motorized Curtains",
+        category: "curtains",
+        description: "Smart automation motors with silent actuation, smartphone control, and home automation integration.",
+        image: "/service/11.png",
         badge: "Smart Automation",
         features: ["Silent Motor Drive", "Remote & App Control", "Home Automation Compatible"]
     },
     {
+        id: "double-layer-curtains",
+        name: "Double-Layer Curtains",
+        category: "curtains",
+        description: "Combined translucent sheer and heavy blackout layers on dual tracks for versatile day and night light control.",
+        image: "/service/12.png",
+        features: ["Dual Track System", "Daylight Sheer & Night Blackout", "Luxury Layered Look"]
+    },
+    {
+        id: "pleated-mosquito-nets",
+        name: "Pleated Mosquito Nets",
+        category: "mosquito_nets",
+        description: "High-grade aluminium track mosquito net systems featuring pleated mesh for insect defense without sacrificing airflow.",
+        image: "/service/13.png",
+        badge: "Essential Protection",
+        features: ["Pleated Mesh Technology", "Slim Aluminium Profile", "Smooth Lateral Glide"]
+    },
+    {
         id: "wallpapers",
-        name: "Designer Wallpapers",
-        category: "specialty",
+        name: "Wallpapers",
+        category: "wall_interior",
         description: "Luxury textured wall coverings and contemporary architectural patterns engineered for dramatic feature walls.",
-        image: "/images/showcase/showcase-interior.webp",
+        image: "/service/14.png",
         features: ["Washable Vinyl & Non-Woven", "Seamless Texture", "Professional Installation"]
+    },
+    {
+        id: "decor-items",
+        name: "Decor Items",
+        category: "wall_interior",
+        description: "Curated interior accent accessories, custom cushion covers, and decorative trimmings for completed interior aesthetics.",
+        image: "/service/15.png",
+        features: ["Bespoke Fabric Accents", "Architectural Decor", "Handcrafted Quality"]
+    },
+    {
+        id: "floor-mats-carpets",
+        name: "Floor Mats & Carpets",
+        category: "flooring",
+        description: "Curated collection of high-density accent floor runners and custom area carpets to anchor your interior spaces.",
+        image: "/service/16.png",
+        features: ["Custom Dimensions", "Anti-Skid Backing", "Stain Guard Treatment"]
     }
 ];
 

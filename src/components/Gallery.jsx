@@ -126,23 +126,7 @@ export default function Gallery() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-12">
-        {/* Instagram Callout Card */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-gray-200">
-          <div>
-            <h4 className="text-lg font-semibold text-[#111827]">Want to see more of our recent work?</h4>
-            <p className="text-sm text-[#4B5563]">Follow daily project updates on Instagram <span className="font-semibold text-[#0C2D37]">@{BUSINESS_DATA.contact.instagram}</span></p>
-          </div>
-          <button
-            onClick={openInstagram}
-            className="px-6 py-3.5 bg-[#0C2D37] text-white hover:bg-[#082129] font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center gap-2.5 shrink-0 border border-[#0C2D37]"
-          >
-            <InstagramIcon size={18} className="text-[#D49520]" />
-            <span>Visit Instagram Profile</span>
-            <ExternalLink size={14} />
-          </button>
-        </div>
-      </div>
+
 
       {/* Lightbox Modal */}
       <AnimatePresence>
