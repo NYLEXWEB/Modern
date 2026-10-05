@@ -16,7 +16,6 @@ export default function Instagram() {
     {
       id: 'google',
       name: 'Google Profile',
-      tag: 'Verified Business • 5.0 Rating',
       badgeColor: 'text-[#4285F4] bg-[#4285F4]/10 border-[#4285F4]/20',
       title: 'Google Profile & Reviews',
       description: 'Read genuine reviews from Kochi homeowners, view showroom location on maps, and rate your experience.',
@@ -32,7 +31,6 @@ export default function Instagram() {
     {
       id: 'whatsapp',
       name: 'WhatsApp Direct',
-      tag: 'Instant Concierge • Active Now',
       badgeColor: 'text-emerald-700 bg-emerald-50 border-emerald-200',
       title: 'WhatsApp Consultation',
       description: 'Get immediate pricing estimates, fabric video swatches, and book a free laser measurement visit in Kochi.',
@@ -48,7 +46,6 @@ export default function Instagram() {
     {
       id: 'instagram',
       name: 'Instagram Official',
-      tag: `@${BUSINESS_DATA.contact.instagram}`,
       badgeColor: 'text-[#E4405F] bg-[#E4405F]/10 border-[#E4405F]/20',
       title: 'Instagram Reels & Stories',
       description: 'Watch real drapery movement, motorized ripple fold tracks in action, and luxury Kerala interior inspiration.',
@@ -64,7 +61,6 @@ export default function Instagram() {
     {
       id: 'facebook',
       name: 'Facebook Page',
-      tag: 'Modern Blinds & Curtains',
       badgeColor: 'text-[#1877F2] bg-[#1877F2]/10 border-[#1877F2]/20',
       title: 'Facebook Community',
       description: 'Stay connected for new seasonal fabric arrivals, festive discounts, and installation project portfolios.',
@@ -101,10 +97,6 @@ export default function Instagram() {
             </p>
           </div>
 
-          <div className="text-xs text-[#4B5563] bg-[#FAF9F6] border border-gray-200 px-5 py-3 rounded-2xl flex items-center gap-2.5 self-start lg:self-auto">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-            <span>All profiles officially verified for <strong>Modern Blinds & Curtains</strong></span>
-          </div>
         </div>
 
         {/* 4 Cards Grid with Original Icons & Brand Colors */}
@@ -125,10 +117,7 @@ export default function Instagram() {
                     {channel.icon}
                   </div>
 
-                  <span className={`inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full border ${channel.badgeColor}`}>
-                    {channel.badgeIcon}
-                    <span className="truncate max-w-[130px]">{channel.tag}</span>
-                  </span>
+
                 </div>
 
                 {/* Content */}

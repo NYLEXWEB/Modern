@@ -44,15 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-xl space-y-6 sm:space-y-8 my-auto text-left"
         >
-          {/* Location Badge */}
-          <div>
-            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-              <span className="w-2 h-2 rounded-full bg-[#D49520] animate-pulse" />
-              <span className="text-[11px] sm:text-xs uppercase tracking-widest text-white font-semibold">
-                Kathrikadavu, Kochi • Kerala
-              </span>
-            </div>
-          </div>
+
 
           {/* Headline with High-Contrast White & Gold Colors */}
           <div className="space-y-3">
