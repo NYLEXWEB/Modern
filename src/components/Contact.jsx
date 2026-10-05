@@ -1,4 +1,4 @@
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, ExternalLink } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';
 import GoogleMaps from './GoogleMaps';
@@ -89,9 +89,20 @@ export default function Contact() {
 
         {/* Google Maps Embed Section */}
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-light text-[#111827]">Locate Our Showroom</h3>
-            <span className="text-xs text-[#4B5563]">Kathrikadavu, Kochi, Kerala</span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h3 className="text-xl font-light text-[#111827]">Locate Our Showroom</h3>
+              <span className="text-xs text-[#4B5563]">Kathrikadavu, Kochi, Kerala</span>
+            </div>
+            <a
+              href={BUSINESS_DATA.location.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0C2D37] hover:text-[#D49520] transition-colors py-1"
+            >
+              <span>Open in Google Maps</span>
+              <ExternalLink size={14} className="text-[#D49520]" />
+            </a>
           </div>
           <GoogleMaps />
         </div>

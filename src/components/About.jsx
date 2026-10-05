@@ -9,12 +9,16 @@ export default function About() {
     window.open(`https://wa.me/${BUSINESS_DATA.contact.whatsapp}?text=${message}`, '_blank');
   };
 
+  const openMaps = () => {
+    window.open(BUSINESS_DATA.location.mapsUrl, '_blank');
+  };
+
   return (
     <section id="about" className="py-20 px-4 sm:px-8 bg-[#FAF9F6] border-t border-gray-200 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Architectural Showroom Image Frame (Compact & Properly Proportioned) */}
+          {/* Left Architectural Showroom Image Frame (Clean Image without overlay card) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,18 +37,7 @@ export default function About() {
                   alt="Modern Blinds & Curtains Kathrikadavu Showroom Interior"
                   className="w-full h-full object-cover object-center filter brightness-105 contrast-105 hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37]/70 via-transparent to-transparent" />
-                
-                {/* Embedded Location Badge */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-gray-200 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs font-bold text-[#0C2D37] uppercase tracking-wider">Kathrikadavu Showroom</div>
-                    <div className="text-[11px] text-[#4B5563]">Kochi, Kerala</div>
-                  </div>
-                  <div className="p-1.5 rounded-full bg-[#D49520]/20 text-[#D49520]">
-                    <MapPin size={18} />
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37]/40 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </motion.div>
@@ -98,14 +91,22 @@ export default function About() {
               </div>
             </div>
 
-            {/* CTA Button (No shadow) */}
-            <div className="pt-2">
+            {/* CTA Buttons */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5">
               <button
                 onClick={openWhatsApp}
-                className="px-8 py-3.5 bg-[#0C2D37] hover:bg-[#082129] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 inline-flex items-center gap-3 border border-[#0C2D37]"
+                className="px-7 py-3.5 bg-[#0C2D37] hover:bg-[#082129] text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 inline-flex items-center gap-3 border border-[#0C2D37]"
               >
                 <WhatsAppIcon size={18} className="text-[#D49520]" />
                 <span>Consult Our Showroom</span>
+              </button>
+
+              <button
+                onClick={openMaps}
+                className="px-7 py-3.5 bg-white hover:bg-[#0C2D37] text-[#0C2D37] hover:text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 inline-flex items-center gap-2.5 border-2 border-[#0C2D37]"
+              >
+                <MapPin size={16} className="text-[#D49520]" />
+                <span>Kathrikadavu Showroom</span>
               </button>
             </div>
 

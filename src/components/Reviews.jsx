@@ -4,7 +4,7 @@ import { BUSINESS_DATA } from '../data/business';
 
 export default function Reviews() {
   const openGoogleReviews = () => {
-    window.open(BUSINESS_DATA.location.mapsUrl, '_blank');
+    window.open(BUSINESS_DATA.location.reviewsUrl, '_blank');
   };
 
   return (

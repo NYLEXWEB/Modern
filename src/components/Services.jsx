@@ -5,7 +5,7 @@ import WhatsAppIcon from './WhatsAppIcon';
 import { CATALOG_ITEMS, BUSINESS_DATA } from '../data/business';
 
 export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('curtains');
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -18,11 +18,20 @@ export default function Services() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  const categories = [
+    { id: 'curtains', label: 'Curtains' },
+    { id: 'blinds', label: 'Blinds' },
+    { id: 'mosquito_nets', label: 'Mosquito Nets' },
+    { id: 'flooring', label: 'Floor Mats' },
+    { id: 'wall_interior', label: 'Interior Decor' },
+    { id: 'all', label: 'All Services' },
+  ];
+
   const filteredItems = activeCategory === 'all'
     ? CATALOG_ITEMS
     : CATALOG_ITEMS.filter((item) => item.category === activeCategory);
 
-  const initialLimit = isMobile ? 3 : 6;
+  const initialLimit = isMobile ? 4 : 6;
   const visibleItems = showAll ? filteredItems : filteredItems.slice(0, initialLimit);
   const hasMoreItems = filteredItems.length > initialLimit;
 
@@ -52,29 +61,26 @@ export default function Services() {
             </p>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#FAF9F6] border border-gray-200 rounded-full self-start lg:self-auto">
-            {[
-              { id: 'all', label: 'All Services' },
-              { id: 'curtains', label: 'Curtains' },
-              { id: 'blinds', label: 'Blinds' },
-              { id: 'specialty', label: 'Specialty' },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => {
-                  setActiveCategory(tab.id);
-                  setShowAll(false);
-                }}
-                className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 ${
-                  activeCategory === tab.id
-                    ? 'bg-[#0C2D37] text-white'
-                    : 'text-[#4B5563] hover:text-[#0C2D37]'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          {/* Filter Tabs (Optimized for Mobile Scroll & Desktop Layout) */}
+          <div className="w-full lg:w-auto overflow-x-auto no-scrollbar py-1 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="flex items-center gap-1.5 p-1.5 bg-[#FAF9F6] border border-gray-200 rounded-full w-max sm:w-auto">
+              {categories.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => {
+                    setActiveCategory(tab.id);
+                    setShowAll(false);
+                  }}
+                  className={`px-4 sm:px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider whitespace-nowrap transition-all duration-300 ${
+                    activeCategory === tab.id
+                      ? 'bg-[#0C2D37] text-white shadow-sm'
+                      : 'text-[#4B5563] hover:text-[#0C2D37] hover:bg-white/60'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 import { BUSINESS_DATA } from '../data/business';
 
 export default function GoogleMaps() {
@@ -8,7 +8,7 @@ export default function GoogleMaps() {
 
   return (
     <div className="w-full bg-[#FAF9F6] border border-gray-200 p-2 relative space-y-4">
-      <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-gray-200">
+      <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-gray-200 rounded-2xl">
         <iframe
           title="Modern Blinds & Curtains Location Map Kathrikadavu Kochi"
           src={BUSINESS_DATA.location.embedUrl}
@@ -22,7 +22,7 @@ export default function GoogleMaps() {
         />
         
         {/* Floating Location Card Overlay */}
-        <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#0C2D37] text-white p-5 border-l-4 border-[#D49520] space-y-2 shadow-lg max-w-sm">
+        <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#0C2D37] text-white p-5 border-l-4 border-[#D49520] space-y-2.5 rounded-r-2xl max-w-sm">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D49520]">
             <MapPin size={14} />
             <span>Showroom Location</span>
@@ -31,13 +31,24 @@ export default function GoogleMaps() {
           <p className="text-xs text-white/80 leading-normal">
             {BUSINESS_DATA.location.fullAddress}
           </p>
-          <button
-            onClick={openDirections}
-            className="pt-2 text-xs font-bold uppercase tracking-wider text-[#D49520] hover:text-white flex items-center gap-1.5 transition-colors"
-          >
-            <span>Get Directions on Google Maps</span>
-            <Navigation size={12} />
-          </button>
+          <div className="pt-1 flex flex-wrap items-center gap-3">
+            <button
+              onClick={openDirections}
+              className="px-4 py-2 bg-[#D49520] hover:bg-[#DF9F1D] text-[#0C2D37] text-xs font-bold uppercase tracking-wider rounded-full flex items-center gap-1.5 transition-all"
+            >
+              <span>Get Directions</span>
+              <Navigation size={12} />
+            </button>
+            <a
+              href={BUSINESS_DATA.location.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs font-bold uppercase tracking-wider text-white hover:text-[#D49520] flex items-center gap-1.5 transition-colors py-1.5"
+            >
+              <span>Open in Maps</span>
+              <ExternalLink size={12} className="text-[#D49520]" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

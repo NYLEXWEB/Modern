@@ -27,7 +27,12 @@ export default function Collection() {
 
   const filteredItems = selectedFilter === 'all'
     ? CATALOG_ITEMS
-    : CATALOG_ITEMS.filter((item) => item.category === selectedFilter);
+    : CATALOG_ITEMS.filter((item) => {
+        if (selectedFilter === 'specialty') {
+          return item.category === 'mosquito_nets' || item.category === 'flooring' || item.category === 'wall_interior';
+        }
+        return item.category === selectedFilter;
+      });
 
   const initialLimit = isMobile ? 3 : 6;
   const visibleItems = showAll ? filteredItems : filteredItems.slice(0, initialLimit);
