@@ -1,5 +1,6 @@
 import { MapPin, Phone, ArrowUp, Navigation } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
+import FacebookIcon from './FacebookIcon';
 import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_DATA } from '../data/business';
 
@@ -86,6 +87,10 @@ export default function Footer() {
               <a href={BUSINESS_DATA.contact.instagramUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                 <InstagramIcon size={14} className="text-[#D49520]" />
                 <span>@{BUSINESS_DATA.contact.instagram}</span>
+              </a>
+              <a href={BUSINESS_DATA.contact.facebookUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
+                <FacebookIcon size={14} />
+                <span>Facebook Page</span>
               </a>
               <a href={BUSINESS_DATA.location.mapsUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Navigation size={14} className="text-[#D49520]" />

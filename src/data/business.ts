@@ -29,6 +29,8 @@ export interface BusinessInfo {
         whatsappFormatted: string;
         instagram: string;
         instagramUrl: string;
+        facebook: string;
+        facebookUrl: string;
     };
     hero: {
         title: string;
@@ -58,7 +60,9 @@ export const BUSINESS_DATA: BusinessInfo = {
         whatsapp: "917907336565",
         whatsappFormatted: "+91 79073 36565",
         instagram: "modern_blinds_curtains",
-        instagramUrl: "https://www.instagram.com/modern_blinds_curtains/"
+        instagramUrl: "https://www.instagram.com/modern_blinds_curtains/",
+        facebook: "modernblindscurtains",
+        facebookUrl: "https://www.facebook.com/modernblindscurtains"
     },
     hero: {
         title: "Luxury in Every Fold.",
