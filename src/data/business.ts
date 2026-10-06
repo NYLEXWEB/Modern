@@ -74,6 +74,15 @@ export const BUSINESS_DATA: BusinessInfo = {
 
 export const CATALOG_ITEMS: CatalogItem[] = [
     {
+        id: "ripple-fold-curtains",
+        name: "Ripple Fold Curtains",
+        category: "curtains",
+        description: "Flowing S-fold drapes suspended from ultra-slim ceiling tracks for a fluid modern architectural aesthetic.",
+        image: "/service/8.png",
+        badge: "Architectural Favorite",
+        features: ["Seamless S-Wave Movement", "Ceiling-Mounted Track", "Sheer & Blackout Options"]
+    },
+    {
         id: "zebra-blinds",
         name: "Zebra Blinds",
         category: "blinds",
@@ -83,64 +92,29 @@ export const CATALOG_ITEMS: CatalogItem[] = [
         features: ["Dual Layer Precision", "Light Dimming Control", "Dust Resistant Weave"]
     },
     {
+        id: "motorized-curtains",
+        name: "Motorized Curtains",
+        category: "curtains",
+        description: "Smart automation motors with silent actuation, smartphone control, and home automation integration.",
+        image: "/service/11.png",
+        badge: "Smart Automation",
+        features: ["Silent Motor Drive", "Remote & App Control", "Home Automation Compatible"]
+    },
+    {
+        id: "floor-mats-carpets",
+        name: "Floor Mats & Carpets",
+        category: "flooring",
+        description: "Curated collection of high-density accent floor runners and custom area carpets to anchor your interior spaces.",
+        image: "/service/16.png",
+        features: ["Custom Dimensions", "Anti-Skid Backing", "Stain Guard Treatment"]
+    },
+    {
         id: "roller-blinds",
         name: "Roller Blinds",
         category: "blinds",
         description: "Sleek, minimalist window coverings engineered for solar control, glare reduction, and clean interior lines.",
         image: "/service/2.png",
         features: ["Sunscreen 1%-5% Openness", "Total Blackout Series", "Moisture Resistant"]
-    },
-    {
-        id: "roman-blinds",
-        name: "Roman Blinds",
-        category: "blinds",
-        description: "Soft fabric shades that stack neatly into uniform horizontal pleats, bringing classic warmth to modern frames.",
-        image: "/service/3.png",
-        features: ["Cascading Fabric Folds", "Manual or Motorised", "Extensive Fabric Palette"]
-    },
-    {
-        id: "venetian-blinds",
-        name: "Venetian Blinds",
-        category: "blinds",
-        description: "Classic horizontal louvred blinds providing precise direction control of light and airflow.",
-        image: "/service/4.png",
-        features: ["Adjustable Louvre Tilt", "Aluminium & Timber Slat Options", "Easy Wipe Clean"]
-    },
-    {
-        id: "wooden-blinds",
-        name: "Wooden Blinds",
-        category: "blinds",
-        description: "Rich natural timber slats offering organic warmth, luxury texture, and sturdy architectural light management.",
-        image: "/service/5.png",
-        badge: "Premium Timber",
-        features: ["100% Real Hardwood Slats", "UV Protective Coating", "Custom Stain Finishes"]
-    },
-    {
-        id: "honeycomb-blinds",
-        name: "Honeycomb Blinds",
-        category: "blinds",
-        description: "Cellular structure engineered for superior acoustic absorption and energy-efficient thermal insulation.",
-        image: "/service/6.png",
-        badge: "Energy Saver",
-        features: ["Cellular Insulation", "Sound Dampening", "Top-Down Bottom-Up"]
-    },
-    {
-        id: "balcony-blinds",
-        name: "Balcony Blinds",
-        category: "blinds",
-        description: "Weatherproof exterior shielding crafted from treated bamboo and reinforced PVC for tropical balcony outdoor living.",
-        image: "/service/7.png",
-        badge: "Weatherproof",
-        features: ["Rain & UV Resistance", "Heavy Duty Crank Mechanism", "Wind Resistant Track"]
-    },
-    {
-        id: "ripple-fold-curtains",
-        name: "Ripple Fold Curtains",
-        category: "curtains",
-        description: "Flowing S-fold drapes suspended from ultra-slim ceiling tracks for a fluid modern architectural aesthetic.",
-        image: "/service/8.png",
-        badge: "Architectural Favorite",
-        features: ["Seamless S-Wave Movement", "Ceiling-Mounted Track", "Sheer & Blackout Options"]
     },
     {
         id: "pleated-curtains",
@@ -152,21 +126,55 @@ export const CATALOG_ITEMS: CatalogItem[] = [
         features: ["Double & Triple Pinch Pleat", "Custom Drop Heights", "Thermal Lining Available"]
     },
     {
+        id: "balcony-blinds",
+        name: "Balcony Blinds",
+        category: "blinds",
+        description: "Weatherproof exterior shielding crafted from treated bamboo and reinforced PVC for tropical balcony outdoor living.",
+        image: "/service/7.png",
+        badge: "Weatherproof",
+        features: ["Rain & UV Resistance", "Heavy Duty Crank Mechanism", "Wind Resistant Track"]
+    },
+    {
+        id: "roman-blinds",
+        name: "Roman Blinds",
+        category: "blinds",
+        description: "Soft fabric shades that stack neatly into uniform horizontal pleats, bringing classic warmth to modern frames.",
+        image: "/service/3.png",
+        features: ["Cascading Fabric Folds", "Manual or Motorised", "Extensive Fabric Palette"]
+    },
+    {
+        id: "wooden-blinds",
+        name: "Wooden Blinds",
+        category: "blinds",
+        description: "Rich natural timber slats offering organic warmth, luxury texture, and sturdy architectural light management.",
+        image: "/service/5.png",
+        badge: "Premium Timber",
+        features: ["100% Real Hardwood Slats", "UV Protective Coating", "Custom Stain Finishes"]
+    },
+    {
+        id: "venetian-blinds",
+        name: "Venetian Blinds",
+        category: "blinds",
+        description: "Classic horizontal louvred blinds providing precise direction control of light and airflow.",
+        image: "/service/4.png",
+        features: ["Adjustable Louvre Tilt", "Aluminium & Timber Slat Options", "Easy Wipe Clean"]
+    },
+    {
+        id: "honeycomb-blinds",
+        name: "Honeycomb Blinds",
+        category: "blinds",
+        description: "Cellular structure engineered for superior acoustic absorption and energy-efficient thermal insulation.",
+        image: "/service/6.png",
+        badge: "Energy Saver",
+        features: ["Cellular Insulation", "Sound Dampening", "Top-Down Bottom-Up"]
+    },
+    {
         id: "double-height-curtains",
         name: "Double-Height Curtains",
         category: "curtains",
         description: "Dramatic floor-to-ceiling drapery designed for grand double-height living rooms and atrium glazing.",
         image: "/service/10.png",
         features: ["Heavy Duty Motorised Track", "Grand Vertical Proportion", "Acoustic Noise Reduction"]
-    },
-    {
-        id: "motorized-curtains",
-        name: "Motorized Curtains",
-        category: "curtains",
-        description: "Smart automation motors with silent actuation, smartphone control, and home automation integration.",
-        image: "/service/11.png",
-        badge: "Smart Automation",
-        features: ["Silent Motor Drive", "Remote & App Control", "Home Automation Compatible"]
     },
     {
         id: "double-layer-curtains",
@@ -200,14 +208,6 @@ export const CATALOG_ITEMS: CatalogItem[] = [
         description: "Curated interior accent accessories, custom cushion covers, and decorative trimmings for completed interior aesthetics.",
         image: "/service/15.png",
         features: ["Bespoke Fabric Accents", "Architectural Decor", "Handcrafted Quality"]
-    },
-    {
-        id: "floor-mats-carpets",
-        name: "Floor Mats & Carpets",
-        category: "flooring",
-        description: "Curated collection of high-density accent floor runners and custom area carpets to anchor your interior spaces.",
-        image: "/service/16.png",
-        features: ["Custom Dimensions", "Anti-Skid Backing", "Stain Guard Treatment"]
     }
 ];
 
