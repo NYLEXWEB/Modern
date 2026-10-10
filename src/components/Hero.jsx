@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-xl space-y-6 sm:space-y-8 my-auto text-left"
+          className="w-full max-w-2xl space-y-6 sm:space-y-8 my-auto text-left"
         >
 
 
@@ -77,7 +77,7 @@ export default function Hero() {
           </div>
 
           {/* Highlights */}
-          <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/15 max-w-lg">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-white/15 max-w-2xl">
             <div>
               <div className="text-xl sm:text-2xl font-light text-white font-heading">Custom</div>
               <div className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider mt-0.5 font-medium">Measurement</div>
@@ -89,6 +89,10 @@ export default function Hero() {
             <div>
               <div className="text-xl sm:text-2xl font-light text-white font-heading">Motorised</div>
               <div className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider mt-0.5 font-medium">Automation</div>
+            </div>
+            <div>
+              <div className="text-xl sm:text-2xl font-light text-white font-heading">Readymade</div>
+              <div className="text-[11px] sm:text-xs text-white/70 uppercase tracking-wider mt-0.5 font-medium">Curtains & Blinds</div>
             </div>
           </div>
 

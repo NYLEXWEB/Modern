@@ -51,7 +51,7 @@ export const BUSINESS_DATA: BusinessInfo = {
         state: "Kerala",
         country: "India",
         fullAddress: "Kathrikadavu, Kochi, Kerala, India",
-        mapsUrl: "https://share.google/WSB1b9xWdHuzb9AZu",
+        mapsUrl: "https://share.google/svpUR405CaKMg0J02",
         reviewsUrl: "https://www.google.com/search?sca_esv=95587ab41e5a5533&rlz=1C1YTUH_enIN1171IN1171&sxsrf=APpeQnvtQCHPmWU5ChTtHaJIF_C0KTGTpg:1791197158504&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_3z6iWxLf9RKPLOZDdtCreB6B5rV_ZhTh5NZQl3uErAgnf7StISgyWRc2DASkdIVsAWa9PrtVlVr_4K0J8cOwjcR4gG1ehQlmn0ICEwKpxRQh3KL_w%3D%3D&q=Modern+Blinds+%26+Curtains+Kochi+Reviews&sa=X&ved=2ahUKEwius-uy2aKXAxXNi-EIHWcUPdIQ0bkNegQIIhAF&biw=1536&bih=730&dpr=1.25",
         embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15717.38240409951!2d76.297424!3d9.988019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d32f50587a3%3A0xb2c7104b2b000000!2sKathrikadavu%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000"
     },
@@ -60,9 +60,9 @@ export const BUSINESS_DATA: BusinessInfo = {
         whatsapp: "917907336565",
         whatsappFormatted: "+91 79073 36565",
         instagram: "modern_blinds_curtains",
-        instagramUrl: "https://www.instagram.com/modern_blinds_curtains/",
+        instagramUrl: "https://www.instagram.com/modern_blinds_curtains?stkn=MXNmbmc5b3ZoM2hhOQ==",
         facebook: "modernblindscurtains",
-        facebookUrl: "https://www.facebook.com/modernblindscurtains"
+        facebookUrl: "https://www.facebook.com/share/1DZDoWnC8c/?mibextid=wwXIfr"
     },
     hero: {
         title: "Luxury in Every Fold.",
