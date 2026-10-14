@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_DATA } from '../data/business';
+import { navigateTo } from '../utils/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,6 +30,16 @@ export default function Navbar() {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+    if (window.location.pathname !== '/') {
+      navigateTo('/');
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
