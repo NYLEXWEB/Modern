@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to inquire about your window solutions.`);
+    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to Enquiry about your window solutions.`);
     window.open(`https://wa.me/${BUSINESS_DATA.contact.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -61,7 +61,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1.5 text-xs text-white/70">
               <li>Pleated & Ripple Curtains</li>
-              <li>Roller & Zebra Blinds</li>
+              <li>Roller & Zeebra Blinds</li>
               <li>Roman & Honeycomb Shades</li>
               <li>Vertical & Balcony Blinds</li>
               <li>Sliding Mosquito Nets</li>

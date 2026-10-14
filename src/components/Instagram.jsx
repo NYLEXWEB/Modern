@@ -8,7 +8,7 @@ import { BUSINESS_DATA } from '../data/business';
 
 export default function Instagram() {
   const openWhatsApp = () => {
-    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to inquire about your window solutions and fabric collections.`);
+    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to Enquiry about your window solutions and fabric collections.`);
     window.open(`https://wa.me/${BUSINESS_DATA.contact.whatsapp}?text=${message}`, '_blank');
   };
 

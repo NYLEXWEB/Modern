@@ -26,7 +26,6 @@ export default function App() {
         <Collection />
         <Gallery />
         <WhyChoose />
-        <DigitalCatalog />
         <Reviews />
         <Instagram />
         <Contact />

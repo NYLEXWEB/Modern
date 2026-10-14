@@ -50,7 +50,7 @@ export default function Services() {
   const hasMoreItems = filteredItems.length > initialLimit;
 
   const openWhatsApp = (serviceName) => {
-    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to inquire about ${serviceName}.`);
+    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to Enquiry about ${serviceName}.`);
     window.open(`https://wa.me/${BUSINESS_DATA.contact.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -169,10 +169,10 @@ export default function Services() {
                   <button
                     onClick={() => openWhatsApp(item.name)}
                     className="w-full py-3 bg-[#0C2D37] hover:bg-[#25D366] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 border border-[#0C2D37] hover:border-[#25D366]"
-                    title="Inquire via WhatsApp"
+                    title="Enquiry via WhatsApp"
                   >
                     <WhatsAppIcon size={15} className="text-[#25D366] group-hover:text-white transition-colors shrink-0" />
-                    <span className="truncate">Inquire</span>
+                    <span className="truncate">Enquiry</span>
                   </button>
 
                   <button
@@ -312,7 +312,7 @@ export default function Services() {
 
                     <div className="pt-2 text-xs text-[#6B7280] flex items-center gap-2 bg-[#FAF9F6] p-3 rounded-xl border border-gray-200">
                       <ShieldCheck size={16} className="text-[#0C2D37] shrink-0" />
-                      <span>Custom precision measurement and on-site fitting across Kochi included.</span>
+                      <span>Custom precision measurement and on-site fitting across Kerala included.</span>
                     </div>
                   </div>
 
@@ -323,7 +323,7 @@ export default function Services() {
                       className="w-full py-3.5 bg-[#0C2D37] hover:bg-[#25D366] text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
                     >
                       <WhatsAppIcon size={16} className="text-[#25D366] hover:text-white" />
-                      <span>Inquire via WhatsApp</span>
+                      <span>Enquiry via WhatsApp</span>
                     </button>
 
                     <button

@@ -66,9 +66,7 @@ export default function Gallery() {
                   className="w-full h-full object-cover object-center filter brightness-105 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37]/90 via-[#0C2D37]/20 to-transparent flex flex-col justify-end p-5 text-white opacity-90 group-hover:opacity-100 transition-opacity">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#D49520]">
-                    {img.category}
-                  </span>
+
                   <div className="flex items-center justify-between gap-2 pt-1">
                     <h4 className="text-base font-medium text-white line-clamp-1">{img.title}</h4>
                     <div className="p-2 rounded-full bg-white/20 text-white backdrop-blur-md shrink-0">
@@ -104,9 +102,7 @@ export default function Gallery() {
                   className="w-full h-full object-cover object-center filter brightness-105 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37]/90 via-[#0C2D37]/20 to-transparent flex flex-col justify-end p-5 text-white opacity-90 group-hover:opacity-100 transition-opacity">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#D49520]">
-                    {img.category}
-                  </span>
+
                   <div className="flex items-center justify-between gap-2 pt-1">
                     <h4 className="text-base font-medium text-white line-clamp-1">{img.title}</h4>
                     <div className="p-2 rounded-full bg-white/20 text-white backdrop-blur-md shrink-0">
@@ -162,7 +158,7 @@ export default function Gallery() {
                   className="px-6 py-3 bg-[#D49520] hover:bg-[#DF9F1D] text-[#0C2D37] font-bold text-xs uppercase tracking-wider rounded-full flex items-center gap-2 border border-[#D49520]"
                 >
                   <WhatsAppIcon size={16} className="text-[#0C2D37]" />
-                  <span>Inquire This Style</span>
+                  <span>Enquiry This Style</span>
                 </button>
               </div>
             </div>

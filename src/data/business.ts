@@ -84,7 +84,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     },
     {
         id: "zebra-blinds",
-        name: "Zebra Blinds",
+        name: "Zeebra Blinds",
         category: "blinds",
         description: "Dual-layered light control fabrics offering effortless transitions between transparent view and privacy.",
         image: "/service/1.png",
@@ -268,7 +268,7 @@ export const GALLERY_IMAGES = [
     },
     {
         src: "/gallery/Screenshot_2026-09-27-20-34-42-708_com.whatsapp.w4b.jpg",
-        alt: "Warm wooden tone zebra blinds",
+        alt: "Warm wooden tone Zeebra Blinds",
         title: "Zebra Light Filtering Shade",
         category: "Blinds"
     },

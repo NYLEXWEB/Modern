@@ -96,7 +96,7 @@ export default function Reviews() {
               ))}
             </div>
             <p className="text-sm text-[#4B5563] italic leading-relaxed">
-              "Professional consultation and very clean finish for zebra blinds and balcony rain shields. Highly recommended in Kochi!"
+              "Professional consultation and very clean finish for Zeebra Blinds and balcony rain shields. Highly recommended in Kochi!"
             </p>
             <div className="pt-4 border-t border-gray-100 flex items-center justify-between text-xs">
               <span className="font-semibold text-[#0C2D37]">Interior Decor Client</span>
