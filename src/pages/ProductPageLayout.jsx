@@ -267,7 +267,7 @@ export default function ProductPageLayout({ productId }) {
                     className="flex-1 py-4 px-6 bg-[#D49520] hover:bg-[#DF9F1D] text-[#0C2D37] font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 border border-[#D49520]"
                   >
                     <WhatsAppIcon size={18} className="text-[#0C2D37]" />
-                    <span>Inquire via WhatsApp</span>
+                    <span>Enquiry via WhatsApp</span>
                   </button>
 
                   <a

@@ -38,7 +38,7 @@ export default function Services() {
   const hasMoreItems = filteredItems.length > initialLimit;
 
   const openWhatsApp = (serviceName) => {
-    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to inquire about ${serviceName}.`);
+    const message = encodeURIComponent(`Hello Modern Blinds & Curtains, I would like to Enquiry about ${serviceName}.`);
     window.open(`https://wa.me/${BUSINESS_DATA.contact.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -156,15 +156,15 @@ export default function Services() {
                   </div>
                 </div>
 
-                {/* Dual Action Buttons (Inquire on Left, View Details navigating to dedicated page on Right) */}
+                {/* Dual Action Buttons (Enquiry on Left, View Details navigating to dedicated page on Right) */}
                 <div className="p-6 pt-0 mt-2 grid grid-cols-2 gap-2.5">
                   <button
                     onClick={() => openWhatsApp(item.name)}
                     className="w-full py-3 bg-[#0C2D37] hover:bg-[#25D366] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 border border-[#0C2D37] hover:border-[#25D366]"
-                    title="Inquire via WhatsApp"
+                    title="Enquiry via WhatsApp"
                   >
                     <WhatsAppIcon size={15} className="text-[#25D366] group-hover:text-white transition-colors shrink-0" />
-                    <span className="truncate">Inquire</span>
+                    <span className="truncate">Enquiry</span>
                   </button>
 
                   <button
