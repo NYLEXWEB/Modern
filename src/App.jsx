@@ -6,7 +6,6 @@ import Services from './components/Services';
 import Collection from './components/Collection';
 import Gallery from './components/Gallery';
 import WhyChoose from './components/WhyChoose';
-import DigitalCatalog from './components/DigitalCatalog';
 import Reviews from './components/Reviews';
 import Instagram from './components/Instagram';
 import Contact from './components/Contact';
