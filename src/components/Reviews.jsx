@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ExternalLink, CheckCircle2, Heart, Share2, MoreVertical, X, Sparkles } from 'lucide-react';

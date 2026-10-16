@@ -1,5 +1,7 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { 
   ArrowLeft, 
   Check, 
@@ -17,11 +19,10 @@ import {
   Clock, 
   Layers 
 } from 'lucide-react';
-import WhatsAppIcon from '../components/WhatsAppIcon';
+import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_DATA, CATALOG_ITEMS } from '../data/business';
-import { navigateTo } from '../utils/navigation';
-import Footer from '../components/Footer';
-import FloatingActions from '../components/FloatingActions';
+import Footer from './Footer';
+import FloatingActions from './FloatingActions';
 
 export default function ProductPageLayout({ productId }) {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -56,17 +57,17 @@ export default function ProductPageLayout({ productId }) {
       <header className="sticky top-0 z-40 bg-[#0C2D37]/95 backdrop-blur-md border-b border-white/10 px-4 sm:px-8 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => navigateTo('/')}
+            <Link
+              href="/"
               className="p-2 sm:px-3 sm:py-2 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center gap-2 text-xs font-semibold tracking-wider transition-all duration-300"
               aria-label="Back to Home"
             >
               <ArrowLeft size={16} />
               <span className="hidden sm:inline">Back to Home</span>
-            </button>
+            </Link>
 
-            <button
-              onClick={() => navigateTo('/')}
+            <Link
+              href="/"
               className="text-left"
             >
               <img
@@ -74,7 +75,7 @@ export default function ProductPageLayout({ productId }) {
                 alt={BUSINESS_DATA.name}
                 className="h-8 sm:h-9 w-auto object-contain"
               />
-            </button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -95,25 +96,20 @@ export default function ProductPageLayout({ productId }) {
           
           {/* Breadcrumb Navigation */}
           <nav className="flex items-center gap-2 text-xs text-[#6B7280] overflow-x-auto no-scrollbar py-1">
-            <button 
-              onClick={() => navigateTo('/')} 
+            <Link 
+              href="/" 
               className="hover:text-[#0C2D37] flex items-center gap-1 transition-colors"
             >
               <Home size={13} />
               <span>Home</span>
-            </button>
+            </Link>
             <ChevronRight size={12} className="text-gray-400 shrink-0" />
-            <button 
-              onClick={() => {
-                navigateTo('/');
-                setTimeout(() => {
-                  document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-              }} 
+            <Link 
+              href="/#services" 
               className="hover:text-[#0C2D37] transition-colors"
             >
               Custom Solutions
-            </button>
+            </Link>
             <ChevronRight size={12} className="text-gray-400 shrink-0" />
             <span className="capitalize text-[#6B7280]">
               {product.category.replace('_', ' ')}
@@ -351,25 +347,20 @@ export default function ProductPageLayout({ productId }) {
                 </h3>
               </div>
 
-              <button
-                onClick={() => {
-                  navigateTo('/');
-                  setTimeout(() => {
-                    document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }}
+              <Link
+                href="/#services"
                 className="text-xs font-bold uppercase tracking-wider text-[#0C2D37] hover:text-[#D49520] flex items-center gap-1.5 transition-colors self-start sm:self-auto"
               >
                 <span>View Full Catalog</span>
                 <ChevronRight size={14} />
-              </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((relItem) => (
-                <div
+                <Link
                   key={relItem.id}
-                  onClick={() => navigateTo(`/${relItem.id}`)}
+                  href={`/${relItem.id}`}
                   className="group bg-white border border-gray-200 hover:border-[#0C2D37] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
@@ -405,7 +396,7 @@ export default function ProductPageLayout({ productId }) {
                       <ChevronRight size={14} />
                     </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

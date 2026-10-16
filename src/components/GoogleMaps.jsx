@@ -1,3 +1,5 @@
+'use client';
+
 import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 import { BUSINESS_DATA } from '../data/business';
 

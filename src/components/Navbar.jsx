@@ -1,8 +1,10 @@
+'use client';
+
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_DATA } from '../data/business';
-import { navigateTo } from '../utils/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,21 +30,17 @@ export default function Navbar() {
   ];
 
   const handleNavClick = (e, href) => {
-    e.preventDefault();
     setMobileMenuOpen(false);
-    if (window.location.pathname !== '/') {
-      navigateTo('/');
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-      return;
-    }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      if (window.location.pathname !== '/') {
+        window.location.href = `/${href}`;
+        return;
+      }
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 

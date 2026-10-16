@@ -1,3 +1,5 @@
+'use client';
+
 import { Phone, MapPin, ExternalLink } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';

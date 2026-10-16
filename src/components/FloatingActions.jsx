@@ -1,3 +1,5 @@
+'use client';
+
 import WhatsAppIcon from './WhatsAppIcon';
 import InstagramIcon from './InstagramIcon';
 import { BUSINESS_DATA } from '../data/business';

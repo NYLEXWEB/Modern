@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ShieldCheck, Ruler, Sparkles, Wrench } from 'lucide-react';
 import { VALUES_DATA } from '../data/business';

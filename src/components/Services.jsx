@@ -1,11 +1,14 @@
+'use client';
+
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, ArrowRight, Eye } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { CATALOG_ITEMS, BUSINESS_DATA } from '../data/business';
-import { navigateTo } from '../utils/navigation';
 
 export default function Services() {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -43,7 +46,7 @@ export default function Services() {
   };
 
   const goToProduct = (itemId) => {
-    navigateTo(`/${itemId}`);
+    router.push(`/${itemId}`);
   };
 
   return (

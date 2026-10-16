@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ExternalLink, Star, ArrowUpRight, MessageCircle } from 'lucide-react';
 import GoogleIcon from './GoogleIcon';

@@ -1,8 +1,10 @@
-// Client-side lightweight routing helper without external dependencies
+// Client-side lightweight routing helper for Next.js
 export const navigateTo = (path) => {
-  if (window.location.pathname !== path) {
-    window.history.pushState({}, '', path);
-    window.dispatchEvent(new Event('popstate'));
+  if (typeof window !== 'undefined') {
+    if (window.location.pathname !== path) {
+      window.location.href = path;
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 };

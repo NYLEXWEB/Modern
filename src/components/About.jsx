@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ShieldCheck, MapPin, Award } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
