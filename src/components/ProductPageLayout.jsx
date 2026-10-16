@@ -242,7 +242,7 @@ export default function ProductPageLayout({ productId }) {
                 </div>
               </div>
 
-              {/* Motorized Curtains Exclusivity: 6 Months Warranty & Motor Partner Card */}
+              {/* Motorized Curtains Exclusivity: 5 Year Warranty & Motor Partner Card */}
               {product.id === 'motorized-curtains' && (
                 <div className="bg-gradient-to-br from-[#FAF9F6] to-white border border-[#D49520]/40 rounded-3xl p-6 space-y-4 shadow-xs">
                   <div className="flex items-start justify-between gap-3">
@@ -252,10 +252,10 @@ export default function ProductPageLayout({ productId }) {
                       </div>
                       <div>
                         <h4 className="text-sm font-bold uppercase tracking-wider text-[#0C2D37]">
-                          6 Months Official Motor Warranty
+                          5 Year Warranty & Guarantee
                         </h4>
                         <p className="text-xs text-[#6B7280]">
-                          Full replacement & priority on-site service support in Kochi
+                          Dooya (5 Year Warranty) • Somfy & Deco Window (5 Year Replacement Guarantee)
                         </p>
                       </div>
                     </div>
@@ -339,7 +339,7 @@ export default function ProductPageLayout({ productId }) {
 
           </div>
 
-          {/* Dedicated Smart Motor Brands & 6 Months Warranty Showcase (Only on Motorized Curtains) */}
+          {/* Dedicated Smart Motor Brands & Warranty Showcase (Only on Motorized Curtains) */}
           {product.id === 'motorized-curtains' && (
             <section className="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 space-y-10 shadow-xs">
               {/* Section Header */}
@@ -353,24 +353,24 @@ export default function ProductPageLayout({ productId }) {
                   </div>
                   <h2 className="text-2xl sm:text-4xl font-light text-[#111827] leading-tight">
                     World-Class Motor Brands with <br />
-                    <span className="font-semibold text-[#0C2D37]">6 Months Comprehensive Warranty</span>
+                    <span className="font-semibold text-[#0C2D37]">5 Year Warranty & Replacement Guarantee</span>
                   </h2>
                   <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
-                    We fit our motorized curtains exclusively with internationally certified, whisper-quiet motor drives from Somfy, Dooya, and Deco Window. Every motor installation includes our 6-month on-site replacement and service warranty across Kochi.
+                    We fit our motorized curtains exclusively with internationally certified, whisper-quiet motor drives from Somfy, Dooya, and Deco Window. Enjoy 5 Year Warranty on Dooya motors, and 5 Year Replacement Guarantee on Somfy and Deco Window systems.
                   </p>
                 </div>
 
-                {/* 6-Month Warranty Trust Badge */}
+                {/* 5-Year Warranty Trust Badge */}
                 <div className="bg-[#FAF9F6] border border-[#D49520]/40 rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 shrink-0">
                   <div className="w-12 h-12 rounded-xl bg-[#0C2D37] text-[#D49520] flex items-center justify-center shrink-0 shadow-xs">
                     <ShieldCheck size={26} />
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest text-[#0C2D37]">
-                      6 Months Warranty
+                      5 Year Protection
                     </div>
                     <div className="text-[11px] text-[#6B7280]">
-                      Full Motor & Drive Protection
+                      Warranty & Replacement Guarantee
                     </div>
                   </div>
                 </div>
@@ -432,29 +432,29 @@ export default function ProductPageLayout({ productId }) {
                     <span>Modern Blinds Warranty Commitment</span>
                   </div>
                   <h4 className="text-lg sm:text-xl font-light text-white">
-                    6 Months Complete Replacement & Repair Protection
+                    5 Year Comprehensive Protection on Smart Motors
                   </h4>
                   <p className="text-xs text-white/70 leading-relaxed">
-                    If your curtain motor encounters any mechanical friction, electronic actuator fault, or smart sync failure within 6 months of installation, our Kathrikadavu team will service or replace the motor on-site free of charge.
+                    All motorized curtains installed by Modern Blinds & Curtains are backed by authorized coverage: 5 Year Warranty on Dooya motors, and 5 Year Replacement Guarantee on Somfy and Deco Window systems with prompt on-site service in Kochi.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full lg:w-auto text-xs text-white/85">
                   <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
                     <Check size={13} className="text-[#D49520] shrink-0" />
-                    <span>Prompt On-Site Technician Visit</span>
+                    <span>Dooya: 5 Year Official Warranty</span>
                   </div>
                   <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
                     <Check size={13} className="text-[#D49520] shrink-0" />
-                    <span>Genuine Factory Replacement Motors</span>
+                    <span>Somfy: 5 Year Replacement Guarantee</span>
                   </div>
                   <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
                     <Check size={13} className="text-[#D49520] shrink-0" />
-                    <span>Free Re-tuning & App Re-syncing</span>
+                    <span>Deco Window: 5 Year Replacement Guarantee</span>
                   </div>
                   <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
                     <Check size={13} className="text-[#D49520] shrink-0" />
-                    <span>Valid Across Greater Kochi</span>
+                    <span>Prompt On-Site Technician Visit in Kochi</span>
                   </div>
                 </div>
               </div>

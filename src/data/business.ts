@@ -27,7 +27,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         origin: "France",
         tagline: "French Smart Motion Pioneer",
         description: "World leader in motorized window automation featuring ultra-quiet actuation (<30dB), Zigbee / RTS protocols, soft start/stop, and smartphone control.",
-        warranty: "6 Months Official Motor Warranty",
+        warranty: "5 Year Replacement Guarantee",
         features: ["Whisper-Quiet (<30dB)", "Zigbee / RTS Protocols", "Soft Start & Soft Stop", "Touch Motion Manual Override"]
     },
     {
@@ -36,7 +36,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         origin: "Global Leader",
         tagline: "Tubular & Smart Track Drives",
         description: "High-torque smart curtain motors engineered for heavy luxury drapery, dual-channel RF remotes, and Alexa / Google Home voice integration.",
-        warranty: "6 Months Official Motor Warranty",
+        warranty: "5 Year Warranty",
         features: ["Heavy Fabric Load Capacity", "Alexa & Google Home Voice Control", "Multi-Channel RF Remote", "Smartphone App Sync"]
     },
     {
@@ -45,7 +45,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         origin: "Complete Window Solution",
         tagline: "Architectural Window Automation",
         description: "Premium engineered motorized drapery tracks and window automation hardware offering smooth belt-drive glide and reliable daily performance.",
-        warranty: "6 Months Official Motor Warranty",
+        warranty: "5 Year Replacement Guarantee",
         features: ["Architectural Track Profiles", "Smooth Glide Belt System", "Multi-Room Synchronization", "Reliable Power Actuators"]
     }
 ];
@@ -140,7 +140,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
         description: "Smart automation motors with silent actuation, smartphone control, and home automation integration.",
         image: "/service/11.png",
         badge: "Smart Automation",
-        warranty: "6 Months Motor Warranty",
+        warranty: "5 Year Warranty & Replacement Guarantee",
         motorBrands: MOTORIZED_CURTAIN_BRANDS,
         features: ["Silent Motor Drive", "Remote & App Control", "Home Automation Compatible"]
     },
