@@ -11,7 +11,6 @@ import {
   Sparkles, 
   ZoomIn, 
   ZoomOut, 
-  X, 
   ExternalLink, 
   ChevronRight, 
   Home, 
@@ -20,7 +19,7 @@ import {
   Layers 
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
-import { BUSINESS_DATA, CATALOG_ITEMS } from '../data/business';
+import { BUSINESS_DATA, CATALOG_ITEMS, MOTORIZED_CURTAIN_BRANDS } from '../data/business';
 import Footer from './Footer';
 import FloatingActions from './FloatingActions';
 
@@ -243,6 +242,52 @@ export default function ProductPageLayout({ productId }) {
                 </div>
               </div>
 
+              {/* Motorized Curtains Exclusivity: 6 Months Warranty & Motor Partner Card */}
+              {product.id === 'motorized-curtains' && (
+                <div className="bg-gradient-to-br from-[#FAF9F6] to-white border border-[#D49520]/40 rounded-3xl p-6 space-y-4 shadow-xs">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-11 h-11 rounded-2xl bg-[#0C2D37] text-[#D49520] flex items-center justify-center shrink-0 shadow-xs">
+                        <ShieldCheck size={22} />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-[#0C2D37]">
+                          6 Months Official Motor Warranty
+                        </h4>
+                        <p className="text-xs text-[#6B7280]">
+                          Full replacement & priority on-site service support in Kochi
+                        </p>
+                      </div>
+                    </div>
+                    <span className="shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      Certified
+                    </span>
+                  </div>
+
+                  {/* Supported Motor Brands Quick Grid */}
+                  <div className="pt-3 border-t border-gray-200/80 space-y-2">
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-[#6B7280]">
+                      Authorized Motor Brands
+                    </div>
+                    <div className="grid grid-cols-3 gap-2.5">
+                      {MOTORIZED_CURTAIN_BRANDS.map((brand) => (
+                        <div
+                          key={brand.name}
+                          className="bg-white border border-gray-200 hover:border-[#D49520] rounded-xl p-2.5 flex items-center justify-center h-13 shadow-2xs transition-colors"
+                          title={`${brand.name} - ${brand.warranty}`}
+                        >
+                          <img
+                            src={brand.logo}
+                            alt={brand.name}
+                            className="max-h-6 max-w-full object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Action Callout Box */}
               <div className="bg-[#0C2D37] text-white rounded-3xl p-6 sm:p-8 space-y-6 border border-[#0C2D37]">
                 <div className="space-y-2">
@@ -293,6 +338,128 @@ export default function ProductPageLayout({ productId }) {
             </div>
 
           </div>
+
+          {/* Dedicated Smart Motor Brands & 6 Months Warranty Showcase (Only on Motorized Curtains) */}
+          {product.id === 'motorized-curtains' && (
+            <section className="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 space-y-10 shadow-xs">
+              {/* Section Header */}
+              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-gray-100">
+                <div className="space-y-3 max-w-2xl">
+                  <div className="flex items-center gap-2">
+                    <span className="w-6 h-[2px] bg-[#D49520]" />
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#0C2D37]">
+                      Motorization Technology
+                    </span>
+                  </div>
+                  <h2 className="text-2xl sm:text-4xl font-light text-[#111827] leading-tight">
+                    World-Class Motor Brands with <br />
+                    <span className="font-semibold text-[#0C2D37]">6 Months Comprehensive Warranty</span>
+                  </h2>
+                  <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                    We fit our motorized curtains exclusively with internationally certified, whisper-quiet motor drives from Somfy, Dooya, and Deco Window. Every motor installation includes our 6-month on-site replacement and service warranty across Kochi.
+                  </p>
+                </div>
+
+                {/* 6-Month Warranty Trust Badge */}
+                <div className="bg-[#FAF9F6] border border-[#D49520]/40 rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-[#0C2D37] text-[#D49520] flex items-center justify-center shrink-0 shadow-xs">
+                    <ShieldCheck size={26} />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest text-[#0C2D37]">
+                      6 Months Warranty
+                    </div>
+                    <div className="text-[11px] text-[#6B7280]">
+                      Full Motor & Drive Protection
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3 Motor Brands Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {MOTORIZED_CURTAIN_BRANDS.map((brand) => (
+                  <div
+                    key={brand.name}
+                    className="bg-[#FAF9F6]/60 border border-gray-200 hover:border-[#0C2D37] rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-6 transition-all duration-300 hover:shadow-md group"
+                  >
+                    <div className="space-y-5">
+                      {/* Brand Logo Container */}
+                      <div className="bg-white border border-gray-200 rounded-2xl h-24 p-4 flex items-center justify-center shadow-2xs group-hover:border-[#D49520] transition-colors">
+                        <img
+                          src={brand.logo}
+                          alt={brand.name}
+                          className="max-h-12 max-w-[170px] object-contain"
+                        />
+                      </div>
+
+                      {/* Brand Info */}
+                      <div className="space-y-1.5">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-lg font-semibold text-[#111827]">
+                            {brand.name}
+                          </h3>
+                        </div>
+                        <p className="text-xs font-medium text-[#D49520]">
+                          {brand.tagline}
+                        </p>
+                      </div>
+
+                      <p className="text-xs text-[#4B5563] leading-relaxed">
+                        {brand.description}
+                      </p>
+
+                      {/* Features */}
+                    
+                    </div>
+
+                    {/* Warranty Tag */}
+                    <div className="pt-4 border-t border-gray-200 flex items-center justify-between">
+                      <span className="text-[11px] font-bold text-[#0C2D37] flex items-center gap-1.5">
+                        <ShieldCheck size={14} className="text-[#D49520]" />
+                        <span>{brand.warranty}</span>
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Warranty Commitment Banner */}
+              <div className="bg-[#0C2D37] text-white rounded-3xl p-6 sm:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border border-[#0C2D37]">
+                <div className="space-y-2 max-w-xl">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D49520]">
+                    <ShieldCheck size={16} />
+                    <span>Modern Blinds Warranty Commitment</span>
+                  </div>
+                  <h4 className="text-lg sm:text-xl font-light text-white">
+                    6 Months Complete Replacement & Repair Protection
+                  </h4>
+                  <p className="text-xs text-white/70 leading-relaxed">
+                    If your curtain motor encounters any mechanical friction, electronic actuator fault, or smart sync failure within 6 months of installation, our Kathrikadavu team will service or replace the motor on-site free of charge.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full lg:w-auto text-xs text-white/85">
+                  <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
+                    <Check size={13} className="text-[#D49520] shrink-0" />
+                    <span>Prompt On-Site Technician Visit</span>
+                  </div>
+                  <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
+                    <Check size={13} className="text-[#D49520] shrink-0" />
+                    <span>Genuine Factory Replacement Motors</span>
+                  </div>
+                  <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
+                    <Check size={13} className="text-[#D49520] shrink-0" />
+                    <span>Free Re-tuning & App Re-syncing</span>
+                  </div>
+                  <div className="bg-white/10 rounded-xl px-3.5 py-2 flex items-center gap-2 border border-white/10">
+                    <Check size={13} className="text-[#D49520] shrink-0" />
+                    <span>Valid Across Greater Kochi</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* 3-Step Process Section */}
           <div className="bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 space-y-8">
