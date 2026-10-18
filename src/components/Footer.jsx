@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, ArrowUp, Navigation } from 'lucide-react';
+import { Phone, ArrowUp, Navigation } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
 import FacebookIcon from './FacebookIcon';
 import WhatsAppIcon from './WhatsAppIcon';

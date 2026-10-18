@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_DATA } from '../data/business';
