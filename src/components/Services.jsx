@@ -124,12 +124,6 @@ export default function Services() {
                         <span>View Details</span>
                       </span>
                     </div>
-
-                    {item.badge && (
-                      <span className="absolute top-4 left-4 bg-[#0C2D37] text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full border border-white/20">
-                        {item.badge}
-                      </span>
-                    )}
                   </div>
 
                   {/* Content */}

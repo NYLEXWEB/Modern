@@ -267,21 +267,25 @@ export default function ProductPageLayout({ productId }) {
                   {/* Supported Motor Brands Quick Grid */}
                   <div className="pt-3 border-t border-gray-200/80 space-y-2">
                     <div className="text-[10px] font-bold uppercase tracking-widest text-[#6B7280]">
-                      Authorized Motor Brands
+                      Authorized Motor Brands (Click to visit official site)
                     </div>
                     <div className="grid grid-cols-3 gap-2.5">
                       {MOTORIZED_CURTAIN_BRANDS.map((brand) => (
-                        <div
+                        <a
                           key={brand.name}
-                          className="bg-white border border-gray-200 hover:border-[#D49520] rounded-xl p-2.5 flex items-center justify-center h-13 shadow-2xs transition-colors"
-                          title={`${brand.name} - ${brand.warranty}`}
+                          href={brand.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative overflow-hidden bg-white border border-gray-200 hover:border-[#D49520]/80 rounded-xl p-2.5 flex items-center justify-center h-14 shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group/item cursor-pointer"
+                          title={`Visit official ${brand.name} website - ${brand.warranty}`}
                         >
+                          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D49520] to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                           <img
                             src={brand.logo}
                             alt={brand.name}
-                            className="max-h-6 max-w-full object-contain"
+                            className="max-h-7 max-w-full object-contain group-hover/item:scale-110 transition-transform duration-300 ease-out"
                           />
-                        </div>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -376,51 +380,71 @@ export default function ProductPageLayout({ productId }) {
                 </div>
               </div>
 
-              {/* 3 Motor Brands Grid */}
+              {/* 3 Motor Brands Grid (Clickable to Official Websites with Luxury Hover Effect) */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {MOTORIZED_CURTAIN_BRANDS.map((brand) => (
-                  <div
+                  <a
                     key={brand.name}
-                    className="bg-[#FAF9F6]/60 border border-gray-200 hover:border-[#0C2D37] rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-6 transition-all duration-300 hover:shadow-md group"
+                    href={brand.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative overflow-hidden bg-gradient-to-b from-white via-[#FAF9F6] to-[#F5F2EB]/40 border border-gray-200/90 hover:border-[#D49520]/70 rounded-3xl p-6 sm:p-7 flex flex-col justify-between space-y-6 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,45,55,0.18),0_0_0_1px_rgba(212,149,32,0.25)] group cursor-pointer block"
+                    title={`Visit official ${brand.name} website`}
                   >
-                    <div className="space-y-5">
-                      {/* Brand Logo Container */}
-                      <div className="bg-white border border-gray-200 rounded-2xl h-24 p-4 flex items-center justify-center shadow-2xs group-hover:border-[#D49520] transition-colors">
+                    {/* Glowing Top Shimmer Line on Hover */}
+                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#D49520] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 scale-x-50 group-hover:scale-x-100" />
+
+                    {/* Ambient Luxury Corner Glow on Hover */}
+                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#D49520]/15 rounded-full blur-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-[#0C2D37]/10 rounded-full blur-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                    <div className="space-y-5 relative z-10">
+                      {/* Brand Logo Container with floating elevation */}
+                      <div className="bg-white border border-gray-200/90 group-hover:border-[#D49520]/50 rounded-2xl h-24 p-4 flex items-center justify-center shadow-2xs group-hover:shadow-[0_12px_28px_-6px_rgba(12,45,55,0.1)] group-hover:bg-gradient-to-b group-hover:from-white group-hover:to-[#FAF9F6] transition-all duration-500 relative">
                         <img
                           src={brand.logo}
                           alt={brand.name}
-                          className="max-h-12 max-w-[170px] object-contain"
+                          className="max-h-12 max-w-[170px] object-contain group-hover:scale-110 transition-transform duration-500 ease-out"
                         />
+                        {/* Circular External Link Pill */}
+                        <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-gray-50 border border-gray-200/70 text-gray-400 group-hover:bg-[#0C2D37] group-hover:border-[#0C2D37] group-hover:text-[#D49520] flex items-center justify-center transition-all duration-300 group-hover:rotate-45 shadow-2xs">
+                          <ExternalLink size={12} />
+                        </div>
                       </div>
 
                       {/* Brand Info */}
-                      <div className="space-y-1.5">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-[#111827]">
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between gap-2">
+                          <h3 className="text-xl font-semibold text-[#111827] group-hover:text-[#0C2D37] transition-colors duration-300">
                             {brand.name}
                           </h3>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#D49520] bg-white group-hover:bg-[#0C2D37] group-hover:text-[#D49520] border border-[#D49520]/30 group-hover:border-[#0C2D37] px-2.5 py-0.5 rounded-full transition-all duration-300 shrink-0 shadow-2xs">
+                            Official Site ↗
+                          </span>
                         </div>
-                        <p className="text-xs font-medium text-[#D49520]">
-                          {brand.tagline}
+                        <p className="text-xs font-semibold uppercase tracking-wider text-[#D49520] flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#D49520] group-hover:scale-125 transition-transform duration-300" />
+                          <span>{brand.tagline}</span>
                         </p>
                       </div>
 
-                      <p className="text-xs text-[#4B5563] leading-relaxed">
+                      <p className="text-xs text-[#4B5563] group-hover:text-[#374151] leading-relaxed transition-colors duration-300">
                         {brand.description}
                       </p>
-
-                      {/* Features */}
-                    
                     </div>
 
-                    {/* Warranty Tag */}
-                    <div className="pt-4 border-t border-gray-200 flex items-center justify-between">
-                      <span className="text-[11px] font-bold text-[#0C2D37] flex items-center gap-1.5">
-                        <ShieldCheck size={14} className="text-[#D49520]" />
+                    {/* Warranty Tag & External Link CTA Button */}
+                    <div className="pt-4 border-t border-gray-200/80 group-hover:border-[#D49520]/40 flex items-center justify-between transition-colors duration-300 relative z-10">
+                      <span className="text-[11px] font-bold text-[#0C2D37] bg-white group-hover:bg-[#FAF9F6] border border-gray-200/80 group-hover:border-[#D49520]/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-2xs">
+                        <ShieldCheck size={14} className="text-[#D49520] group-hover:scale-110 transition-transform duration-300" />
                         <span>{brand.warranty}</span>
                       </span>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#0C2D37] group-hover:text-white bg-transparent group-hover:bg-[#0C2D37] border border-transparent group-hover:border-[#0C2D37] px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-transparent group-hover:shadow-sm">
+                        <span>Visit Website</span>
+                        <ExternalLink size={11} className="text-[#D49520] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
 

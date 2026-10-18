@@ -5,6 +5,7 @@ export interface MotorBrand {
     tagline: string;
     description: string;
     warranty: string;
+    website: string;
     features: string[];
 }
 
@@ -28,6 +29,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         tagline: "French Smart Motion Pioneer",
         description: "World leader in motorized window automation featuring ultra-quiet actuation (<30dB), Zigbee / RTS protocols, soft start/stop, and smartphone control.",
         warranty: "5 Year Replacement Guarantee",
+        website: "https://www.somfy.co.in/",
         features: ["Whisper-Quiet (<30dB)", "Zigbee / RTS Protocols", "Soft Start & Soft Stop", "Touch Motion Manual Override"]
     },
     {
@@ -37,6 +39,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         tagline: "Tubular & Smart Track Drives",
         description: "High-torque smart curtain motors engineered for heavy luxury drapery, dual-channel RF remotes, and Alexa / Google Home voice integration.",
         warranty: "5 Year Warranty",
+        website: "https://www.dooya.com/",
         features: ["Heavy Fabric Load Capacity", "Alexa & Google Home Voice Control", "Multi-Channel RF Remote", "Smartphone App Sync"]
     },
     {
@@ -46,6 +49,7 @@ export const MOTORIZED_CURTAIN_BRANDS: MotorBrand[] = [
         tagline: "Architectural Window Automation",
         description: "Premium engineered motorized drapery tracks and window automation hardware offering smooth belt-drive glide and reliable daily performance.",
         warranty: "5 Year Replacement Guarantee",
+        website: "https://www.decowindow.in/",
         features: ["Architectural Track Profiles", "Smooth Glide Belt System", "Multi-Room Synchronization", "Reliable Power Actuators"]
     }
 ];
@@ -117,7 +121,7 @@ export const BUSINESS_DATA: BusinessInfo = {
 export const CATALOG_ITEMS: CatalogItem[] = [
     {
         id: "ripple-fold-curtains",
-        name: "Ripple Fold Curtains",
+        name: "Ripple Curtains",
         category: "curtains",
         description: "Flowing S-fold drapes suspended from ultra-slim ceiling tracks for a fluid modern architectural aesthetic.",
         image: "/service/8.png",
@@ -252,6 +256,193 @@ export const CATALOG_ITEMS: CatalogItem[] = [
         description: "Curated interior accent accessories, custom cushion covers, and decorative trimmings for completed interior aesthetics.",
         image: "/service/15.png",
         features: ["Bespoke Fabric Accents", "Architectural Decor", "Handcrafted Quality"]
+    }
+];
+
+export interface ServiceGalleryItem {
+    id: string;
+    image: string;
+    title: string;
+    category: string;
+    description: string;
+}
+
+export const SERVICE_GALLERY_ITEMS: ServiceGalleryItem[] = [
+    {
+        id: "zebra-blinds",
+        image: "/service/1.png",
+        title: "Zeebra Blinds",
+        category: "Blinds",
+        description: "Dual-layered light control fabrics offering effortless transitions between transparent view and privacy."
+    },
+    {
+        id: "roller-blinds",
+        image: "/service/2.png",
+        title: "Roller Blinds",
+        category: "Blinds",
+        description: "Sleek, minimalist window coverings engineered for solar control, glare reduction, and clean interior lines."
+    },
+    {
+        id: "roman-blinds",
+        image: "/service/3.png",
+        title: "Roman Blinds",
+        category: "Blinds",
+        description: "Soft fabric shades that stack neatly into uniform horizontal pleats, bringing classic warmth to modern frames."
+    },
+    {
+        id: "venetian-blinds",
+        image: "/service/4.png",
+        title: "Venetian Blinds",
+        category: "Blinds",
+        description: "Classic horizontal louvred blinds providing precise direction control of light and airflow."
+    },
+    {
+        id: "wooden-blinds",
+        image: "/service/5.png",
+        title: "Wooden Blinds",
+        category: "Blinds",
+        description: "Rich natural timber slats offering organic warmth, luxury texture, and sturdy architectural light management."
+    },
+    {
+        id: "honeycomb-blinds",
+        image: "/service/6.png",
+        title: "Honeycomb Blinds",
+        category: "Blinds",
+        description: "Cellular structure engineered for superior acoustic absorption and energy-efficient thermal insulation."
+    },
+    {
+        id: "balcony-blinds",
+        image: "/service/7.png",
+        title: "Balcony Blinds",
+        category: "Blinds",
+        description: "Weatherproof exterior shielding crafted from treated bamboo and reinforced PVC for tropical balcony outdoor living."
+    },
+    {
+        id: "ripple-fold-curtains",
+        image: "/service/8.png",
+        title: "Ripple Curtains",
+        category: "Curtains",
+        description: "Flowing S-fold drapes suspended from ultra-slim ceiling tracks for a fluid modern architectural aesthetic."
+    },
+    {
+        id: "pleated-curtains",
+        image: "/service/9.png",
+        title: "Pleated Curtains",
+        category: "Curtains",
+        description: "Tailored architectural drapes with precision folds, creating structured, timeless luxury for living and bed chambers."
+    },
+    {
+        id: "double-height-curtains",
+        image: "/service/10.png",
+        title: "Double-Height Curtains",
+        category: "Curtains",
+        description: "Dramatic floor-to-ceiling drapery designed for grand double-height living rooms and atrium glazing."
+    },
+    {
+        id: "motorized-curtains",
+        image: "/service/11.png",
+        title: "Motorized Curtains",
+        category: "Curtains",
+        description: "Smart automation drapery systems with silent motor actuation, smartphone control, and home automation integration."
+    },
+    {
+        id: "double-layer-curtains",
+        image: "/service/12.png",
+        title: "Double-Layer Curtains",
+        category: "Curtains",
+        description: "Combined translucent sheer and heavy blackout layers on dual tracks for versatile day and night light control."
+    },
+    {
+        id: "pleated-mosquito-nets",
+        image: "/service/13.png",
+        title: "Pleated Mosquito Nets",
+        category: "Mosquito Nets",
+        description: "High-grade aluminium track mosquito net systems featuring pleated mesh for insect defense without sacrificing airflow."
+    },
+    {
+        id: "wallpapers",
+        image: "/service/14.png",
+        title: "Wallpapers",
+        category: "Wall Interior",
+        description: "Luxury textured wall coverings and contemporary architectural patterns engineered for dramatic feature walls."
+    },
+    {
+        id: "decor-items",
+        image: "/service/15.png",
+        title: "Decor Items",
+        category: "Wall Interior",
+        description: "Curated interior accent accessories, custom cushion covers, and decorative trimmings for completed interior aesthetics."
+    },
+    {
+        id: "floor-mats-carpets",
+        image: "/service/16.png",
+        title: "Floor Mats & Carpets",
+        category: "Flooring",
+        description: "Curated collection of high-density accent floor runners and custom area carpets to anchor your interior spaces."
+    }
+];
+
+export interface ClientReviewVideo {
+    id: number;
+    videoSrc: string;
+    clientName: string;
+    location: string;
+    service: string;
+    rating: number;
+    quote: string;
+    date: string;
+}
+
+export const CLIENT_REVIEW_VIDEOS: ClientReviewVideo[] = [
+    {
+        id: 1,
+        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        clientName: "Arun & Meera",
+        location: "Marine Drive, Kochi",
+        service: "Motorized Curtains & Sheers",
+        rating: 5,
+        quote: "Whisper-quiet motor automation and laser-precise fitting. Upgraded our whole apartment look!",
+        date: "October 2026"
+    },
+    {
+        id: 2,
+        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        clientName: "Dr. Deepak Varma",
+        location: "Kadavanthra, Kochi",
+        service: "Wooden & Zeebra Blinds",
+        rating: 5,
+        quote: "Flawless finishing and timely completion without disturbing our home. Highly recommended!",
+        date: "September 2026"
+    },
+    {
+        id: 3,
+        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        clientName: "Sneha Kurian",
+        location: "Kakkanad, Kochi",
+        service: "Double-Height Ripple Curtains",
+        rating: 5,
+        quote: "The ripple drape wave holds its shape elegantly from top to bottom. Exceptional craftsmanship.",
+        date: "August 2026"
+    },
+    {
+        id: 4,
+        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        clientName: "Mathew Joseph",
+        location: "Panampilly Nagar, Kochi",
+        service: "Balcony Blinds & Mosquito Nets",
+        rating: 5,
+        quote: "Tough monsoon rain protection and smooth pleated insect nets. Great team and support.",
+        date: "July 2026"
+    },
+    {
+        id: 5,
+        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        clientName: "Faisal & Rihana",
+        location: "Edappally, Kochi",
+        service: "Blackout Roller & Ripple Curtains",
+        rating: 5,
+        quote: "Remarkable fabric selection and prompt response on WhatsApp. Completely satisfied!",
+        date: "June 2026"
     }
 ];
 

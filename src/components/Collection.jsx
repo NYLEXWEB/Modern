@@ -108,13 +108,6 @@ export default function Collection() {
                       className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-105 contrast-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37] via-transparent to-transparent opacity-80" />
-                    
-                    {item.badge && (
-                      <span className="absolute top-4 right-4 bg-[#D49520] text-[#0C2D37] text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-[#D49520]">
-                        {item.badge}
-                      </span>
-                    )}
-
                     <div className="absolute bottom-4 left-6 right-6">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[#D49520] block mb-1">
                         {item.category}
