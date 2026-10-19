@@ -78,9 +78,7 @@ export default function WhyChoose() {
               <span className="font-semibold text-[#0C2D37]">Tailored for Kerala Living.</span>
             </h2>
           </div>
-          <p className="max-w-md text-sm text-[#4B5563] leading-relaxed">
-            Window treatments shouldn&apos;t just cover glass—they define the proportions and light of your room. Tap any heading below to explore why architects and homeowners across Kochi trust Modern Blinds &amp; Curtains.
-          </p>
+
         </div>
 
         {/* 2-Column Responsive Layout */}
