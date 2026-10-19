@@ -254,9 +254,7 @@ export default function ProductPageLayout({ productId }) {
                         <h4 className="text-sm font-bold uppercase tracking-wider text-[#0C2D37]">
                           5 Year Warranty & Guarantee
                         </h4>
-                        <p className="text-xs text-[#6B7280]">
-                          Dooya (5 Year Warranty) • Somfy & Deco Window (5 Year Replacement Guarantee)
-                        </p>
+
                       </div>
                     </div>
                     <span className="shrink-0 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
@@ -438,10 +436,6 @@ export default function ProductPageLayout({ productId }) {
                       <span className="text-[11px] font-bold text-[#0C2D37] bg-white group-hover:bg-[#FAF9F6] border border-gray-200/80 group-hover:border-[#D49520]/40 px-2.5 py-1 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-2xs">
                         <ShieldCheck size={14} className="text-[#D49520] group-hover:scale-110 transition-transform duration-300" />
                         <span>{brand.warranty}</span>
-                      </span>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#0C2D37] group-hover:text-white bg-transparent group-hover:bg-[#0C2D37] border border-transparent group-hover:border-[#0C2D37] px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-transparent group-hover:shadow-sm">
-                        <span>Visit Website</span>
-                        <ExternalLink size={11} className="text-[#D49520] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                       </span>
                     </div>
                   </a>

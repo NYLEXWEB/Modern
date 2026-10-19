@@ -54,14 +54,8 @@ export default function Gallery() {
         <div className="space-y-3">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#D49520]" />
-              <span className="text-xs uppercase tracking-wider font-bold text-[#0C2D37]">
-                Row 1 • Collection & Window Treatments
-              </span>
             </div>
-            <span className="text-xs text-[#6B7280] font-medium hidden sm:inline">
-              16 Signature Styles
-            </span>
+
           </div>
 
           {/* Row 1 - Auto Scrolls Left Continuously */}
@@ -106,9 +100,7 @@ export default function Gallery() {
                           <Maximize2 size={13} />
                         </div>
                       </div>
-                      <p className="text-xs text-white/75 line-clamp-2 font-normal">
-                        {item.description}
-                      </p>
+
                     </div>
                   </div>
                 </div>
@@ -123,14 +115,8 @@ export default function Gallery() {
         <div className="space-y-3">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
-              <span className="text-xs uppercase tracking-wider font-bold text-[#0C2D37]">
-                Row 2 • Verified Client Video Reviews
-              </span>
+             
             </div>
-            <span className="text-xs text-[#6B7280] font-medium hidden sm:inline">
-              Click any video to play with audio
-            </span>
           </div>
 
           {/* Row 2 - Auto Scrolls Right Continuously */}
@@ -187,14 +173,8 @@ export default function Gallery() {
                     <div className="space-y-1">
                       <h4 className="text-base font-semibold text-white flex items-center justify-between">
                         <span>{vid.clientName}</span>
-                        <span className="text-[10px] font-normal text-white/60">{vid.date}</span>
                       </h4>
-                      <p className="text-xs text-[#D49520] font-medium line-clamp-1">
-                        {vid.location} • {vid.service}
-                      </p>
-                      <p className="text-[11px] text-white/80 line-clamp-2 italic pt-0.5">
-                        "{vid.quote}"
-                      </p>
+                     
                     </div>
                   </div>
                 </div>
