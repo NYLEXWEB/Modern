@@ -94,7 +94,7 @@ export default function ProductPageLayout({ productId }) {
         <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
           
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs text-[#6B7280] overflow-x-auto no-scrollbar py-1">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#6B7280] overflow-x-auto no-scrollbar py-1">
             <Link 
               href="/" 
               className="hover:text-[#0C2D37] flex items-center gap-1 transition-colors"
@@ -133,7 +133,7 @@ export default function ProductPageLayout({ productId }) {
                 >
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={`${product.name} custom window treatment in Kochi, Kerala - Modern Blinds & Curtains`}
                     className={`w-full h-full object-cover transition-transform duration-500 ease-out filter brightness-105 ${
                       isZoomed ? 'scale-150' : 'scale-100 group-hover:scale-105'
                     }`}

@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, ArrowRight, Eye } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { CATALOG_ITEMS, BUSINESS_DATA } from '../data/business';
 
 export default function Services() {
-  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -106,14 +105,15 @@ export default function Services() {
                 className="group border border-gray-200 bg-[#FAF9F6] rounded-3xl flex flex-col justify-between transition-all duration-300 hover:border-[#0C2D37] overflow-hidden hover:shadow-lg"
               >
                 <div>
-                  {/* Image Container with click-to-navigate */}
-                  <div
-                    onClick={() => goToProduct(item.id)}
-                    className="relative h-60 overflow-hidden bg-gray-100 cursor-pointer"
+                  {/* Image Container with Link */}
+                  <Link
+                    href={`/${item.id}`}
+                    className="block relative h-60 overflow-hidden bg-gray-100 cursor-pointer"
+                    aria-label={`View ${item.name} details`}
                   >
                     <img
                       src={item.image}
-                      alt={item.name}
+                      alt={`${item.name} custom installation in Kochi, Kerala - Modern Blinds & Curtains`}
                       className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-105"
                     />
                     
@@ -124,16 +124,15 @@ export default function Services() {
                         <span>View Details</span>
                       </span>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Content */}
                   <div className="p-6 space-y-4">
-                    <h3
-                      onClick={() => goToProduct(item.id)}
-                      className="text-xl font-semibold text-[#111827] group-hover:text-[#0C2D37] transition-colors cursor-pointer"
-                    >
-                      {item.name}
-                    </h3>
+                    <Link href={`/${item.id}`} className="block group/link">
+                      <h3 className="text-xl font-semibold text-[#111827] group-hover/link:text-[#0C2D37] transition-colors">
+                        {item.name}
+                      </h3>
+                    </Link>
 
                     <p className="text-sm text-[#4B5563] leading-relaxed line-clamp-3 font-normal">
                       {item.description}
@@ -164,14 +163,14 @@ export default function Services() {
                     <span className="truncate">Enquiry</span>
                   </button>
 
-                  <button
-                    onClick={() => goToProduct(item.id)}
-                    className="w-full py-3 bg-white hover:bg-[#0C2D37] text-[#0C2D37] hover:text-white border border-gray-300 hover:border-[#0C2D37] font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm group/btn"
-                    title="View Product Page"
+                  <Link
+                    href={`/${item.id}`}
+                    className="w-full py-3 bg-white hover:bg-[#0C2D37] text-[#0C2D37] hover:text-white border border-gray-300 hover:border-[#0C2D37] font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm group/btn cursor-pointer"
+                    title={`View ${item.name} details`}
                   >
                     <span className="truncate">View Details</span>
                     <ArrowRight size={13} className="shrink-0 text-[#D49520] group-hover/btn:translate-x-0.5 transition-transform" />
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

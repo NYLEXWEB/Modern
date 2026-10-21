@@ -1,5 +1,7 @@
 import { Plus_Jakarta_Sans, Manrope } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { CATALOG_ITEMS } from '../data/business';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -348,6 +350,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-[#FAF9F6] text-[#111827] antialiased selection:bg-[#0C2D37] selection:text-[#D49520]">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

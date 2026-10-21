@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
@@ -100,23 +101,27 @@ export default function Collection() {
                 className="group bg-white/5 border border-white/15 rounded-3xl overflow-hidden flex flex-col justify-between hover:border-[#D49520] transition-all duration-500"
               >
                 <div>
-                  {/* Image Container */}
-                  <div className="relative h-64 overflow-hidden bg-white/5">
+                  {/* Image Container with Link */}
+                  <Link
+                    href={`/${item.id}`}
+                    className="block relative h-64 overflow-hidden bg-white/5 cursor-pointer group/link"
+                    aria-label={`Explore ${item.name} custom collection`}
+                  >
                     <img
                       src={item.image}
-                      alt={item.name}
+                      alt={`${item.name} bespoke window treatment in Kochi, Kerala - Modern Blinds & Curtains`}
                       className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-105 contrast-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37] via-transparent to-transparent opacity-80" />
                     <div className="absolute bottom-4 left-6 right-6">
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[#D49520] block mb-1">
-                        {item.category}
+                        {item.category.replace('_', ' ')}
                       </span>
-                      <h3 className="text-2xl font-light text-white group-hover:text-[#D49520] transition-colors">
+                      <h3 className="text-2xl font-light text-white group-hover/link:text-[#D49520] transition-colors">
                         {item.name}
                       </h3>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Details */}
                   <div className="p-6 space-y-4">

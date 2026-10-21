@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Phone, ArrowUp, Navigation } from 'lucide-react';
 import InstagramIcon from './InstagramIcon';
 import FacebookIcon from './FacebookIcon';
@@ -25,13 +26,13 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
-            <a href="#hero" className="inline-block">
+            <Link href="/" className="inline-block" aria-label="Modern Blinds & Curtains Home">
               <img
                 src="/logo.png"
-                alt={BUSINESS_DATA.name}
+                alt="Modern Blinds & Curtains Kochi Logo"
                 className="h-10 w-auto object-contain"
               />
-            </a>
+            </Link>
             <p className="text-xs text-white/70 leading-relaxed font-normal max-w-sm">
               Premier window treatments, bespoke curtains, architectural blinds, and outdoor weather solutions in Kathrikadavu, Kochi.
             </p>
@@ -46,29 +47,58 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs text-white/80">
-              <li><a href="#hero" className="hover:text-[#D49520] transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-[#D49520] transition-colors">About Showroom</a></li>
-              <li><a href="#services" className="hover:text-[#D49520] transition-colors">Services & Solutions</a></li>
-              <li><a href="#collection" className="hover:text-[#D49520] transition-colors">Digital Showroom</a></li>
-              <li><a href="#gallery" className="hover:text-[#D49520] transition-colors">Real Installations</a></li>
-              <li><a href="#reviews" className="hover:text-[#D49520] transition-colors">Verified Reviews</a></li>
-              <li><a href="#contact" className="hover:text-[#D49520] transition-colors">Contact & Directions</a></li>
+              <li><Link href="/#hero" className="hover:text-[#D49520] transition-colors">Home</Link></li>
+              <li><Link href="/#about" className="hover:text-[#D49520] transition-colors">About Showroom</Link></li>
+              <li><Link href="/#services" className="hover:text-[#D49520] transition-colors">Services & Solutions</Link></li>
+              <li><Link href="/#collection" className="hover:text-[#D49520] transition-colors">Digital Showroom</Link></li>
+              <li><Link href="/#gallery" className="hover:text-[#D49520] transition-colors">Real Installations</Link></li>
+              <li><Link href="/#reviews" className="hover:text-[#D49520] transition-colors">Verified Reviews</Link></li>
+              <li><Link href="/#faq" className="hover:text-[#D49520] transition-colors">FAQ &amp; Help</Link></li>
+              <li><Link href="/#contact" className="hover:text-[#D49520] transition-colors">Contact & Directions</Link></li>
             </ul>
           </div>
 
-          {/* Services Offered */}
+          {/* Custom Window Treatments with Direct SEO Links */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs uppercase font-bold tracking-widest text-[#D49520]">
-              Products Offered
+              Custom Window Solutions
             </h4>
             <ul className="space-y-1.5 text-xs text-white/70">
-              <li>Pleated & Ripple Curtains</li>
-              <li>Roller & Zeebra Blinds</li>
-              <li>Roman & Honeycomb Shades</li>
-              <li>Vertical & Balcony Blinds</li>
-              <li>Sliding Mosquito Nets</li>
-              <li>Motorised Automation</li>
-              <li>Floor Mats & Designer Wallpapers</li>
+              <li>
+                <Link href="/ripple-fold-curtains" className="hover:text-[#D49520] transition-colors">
+                  Ripple Fold Curtains Kochi
+                </Link>
+              </li>
+              <li>
+                <Link href="/motorized-curtains" className="hover:text-[#D49520] transition-colors">
+                  Motorized Curtains &amp; Blinds
+                </Link>
+              </li>
+              <li>
+                <Link href="/zebra-blinds" className="hover:text-[#D49520] transition-colors">
+                  Zebra Blinds &amp; Shades
+                </Link>
+              </li>
+              <li>
+                <Link href="/roller-blinds" className="hover:text-[#D49520] transition-colors">
+                  Blackout Roller Blinds
+                </Link>
+              </li>
+              <li>
+                <Link href="/balcony-blinds" className="hover:text-[#D49520] transition-colors">
+                  Exterior Balcony Rain Blinds
+                </Link>
+              </li>
+              <li>
+                <Link href="/wooden-blinds" className="hover:text-[#D49520] transition-colors">
+                  Natural Wooden Blinds
+                </Link>
+              </li>
+              <li>
+                <Link href="/pleated-mosquito-nets" className="hover:text-[#D49520] transition-colors">
+                  Pleated Mosquito Nets
+                </Link>
+              </li>
             </ul>
           </div>
 
