@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import { Home, ArrowLeft } from 'lucide-react';
 
+export const metadata = {
+  title: 'Page Not Found | Modern Blinds & Curtains',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#0C2D37] text-white flex flex-col items-center justify-center p-6 text-center">

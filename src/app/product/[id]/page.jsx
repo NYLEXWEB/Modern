@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { CATALOG_ITEMS } from '../../../data/business';
 
 export async function generateStaticParams() {
@@ -13,6 +13,6 @@ export default async function LegacyProductRoute({ params }) {
     notFound();
   }
 
-  // Redirect to canonical /[slug] route
-  redirect(`/${id}`);
+  // Permanent 308 redirect to canonical /[slug] route for maximum SEO authority
+  permanentRedirect(`/${id}`);
 }
