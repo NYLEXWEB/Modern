@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: 'Collection', href: '#collection' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Reviews', href: '#reviews' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
 

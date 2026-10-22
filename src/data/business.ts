@@ -412,7 +412,7 @@ export interface ClientReviewVideo {
 export const CLIENT_REVIEW_VIDEOS: ClientReviewVideo[] = [
     {
         id: 1,
-        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        videoSrc: "/video/5_6253328651895449640.MOV",
         clientName: "Arun & Meera",
         location: "Marine Drive, Kochi",
         service: "Motorized Curtains & Sheers",
@@ -422,43 +422,103 @@ export const CLIENT_REVIEW_VIDEOS: ClientReviewVideo[] = [
     },
     {
         id: 2,
-        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        videoSrc: "/video/5_6253328651895449641.MOV",
         clientName: "Dr. Deepak Varma",
         location: "Kadavanthra, Kochi",
         service: "Wooden & Zeebra Blinds",
         rating: 5,
         quote: "Flawless finishing and timely completion without disturbing our home. Highly recommended!",
-        date: "September 2026"
+        date: "October 2026"
     },
     {
         id: 3,
-        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        videoSrc: "/video/5_6253328651895449642.MOV",
         clientName: "Sneha Kurian",
         location: "Kakkanad, Kochi",
         service: "Double-Height Ripple Curtains",
         rating: 5,
         quote: "The ripple drape wave holds its shape elegantly from top to bottom. Exceptional craftsmanship.",
-        date: "August 2026"
+        date: "September 2026"
     },
     {
         id: 4,
-        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        videoSrc: "/video/5_6253328651895449645.MOV",
         clientName: "Mathew Joseph",
         location: "Panampilly Nagar, Kochi",
-        service: "Balcony Blinds & Mosquito Nets",
+        service: "Balcony Blinds & Weather Shield",
         rating: 5,
         quote: "Tough monsoon rain protection and smooth pleated insect nets. Great team and support.",
-        date: "July 2026"
+        date: "September 2026"
     },
     {
         id: 5,
-        videoSrc: "/video/Screen Recording 2026-10-18 231030.mp4",
+        videoSrc: "/video/5_6253328651895449647.MOV",
         clientName: "Faisal & Rihana",
         location: "Edappally, Kochi",
         service: "Blackout Roller & Ripple Curtains",
         rating: 5,
         quote: "Remarkable fabric selection and prompt response on WhatsApp. Completely satisfied!",
+        date: "August 2026"
+    },
+    {
+        id: 6,
+        videoSrc: "/video/5_6253328651895449649.MOV",
+        clientName: "Rajesh & Priya Nair",
+        location: "Aluva, Kochi",
+        service: "Smart Somfy Motorized Drapes",
+        rating: 5,
+        quote: "Smartphone app control works effortlessly. Clean recessed ceiling tracks and super quiet.",
+        date: "August 2026"
+    },
+    {
+        id: 7,
+        videoSrc: "/video/5_6253328651895449651.MOV",
+        clientName: "Anita Thomas",
+        location: "Kaloor, Kochi",
+        service: "Pleated Mosquito Nets & Blinds",
+        rating: 5,
+        quote: "Very neat frame integration on our French doors. Smooth sliding and keeps all insects out.",
+        date: "July 2026"
+    },
+    {
+        id: 8,
+        videoSrc: "/video/5_6253328651895449652.MOV",
+        clientName: "Anand Menon",
+        location: "Thevara, Kochi",
+        service: "Architectural S-Fold Drapery",
+        rating: 5,
+        quote: "The weighted bottom hems keep every pleat falling straight without flaring. Luxury atelier quality.",
+        date: "July 2026"
+    },
+    {
+        id: 9,
+        videoSrc: "/video/5_6253328651895449653.MOV",
+        clientName: "George Kutty",
+        location: "Tripunithura, Kochi",
+        service: "Dooya Motorized Track System",
+        rating: 5,
+        quote: "Heavy velvet and blackout drapes glide like a feather. 5-year warranty was the deciding factor.",
         date: "June 2026"
+    },
+    {
+        id: 10,
+        videoSrc: "/video/VID-20261022-WA0015.mp4",
+        clientName: "Sanjay & Divya",
+        location: "Palarivattom, Kochi",
+        service: "Dual-Layer Zeebra & Roller Shades",
+        rating: 5,
+        quote: "Perfect light filtering during day and total blackout at night. Professional installation crew.",
+        date: "June 2026"
+    },
+    {
+        id: 11,
+        videoSrc: "/video/VID-20261022-WA0016.mp4",
+        clientName: "Vinod Chandran",
+        location: "Kathrikadavu, Kochi",
+        service: "Full Home Window Treatments",
+        rating: 5,
+        quote: "Right next to their showroom. Prompt on-site laser measurements and gorgeous finishing.",
+        date: "May 2026"
     }
 ];
 

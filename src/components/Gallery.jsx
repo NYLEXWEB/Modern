@@ -13,10 +13,8 @@ export default function Gallery() {
   // Row 1: All 16 Service images duplicated for seamless infinite loop
   const serviceMarquee = [...SERVICE_GALLERY_ITEMS, ...SERVICE_GALLERY_ITEMS];
 
-  // Row 2: 5 Client Video Reviews duplicated for seamless infinite loop
+  // Row 2: All 11 Client Video Reviews duplicated for seamless infinite loop
   const videoMarquee = [
-    ...CLIENT_REVIEW_VIDEOS,
-    ...CLIENT_REVIEW_VIDEOS,
     ...CLIENT_REVIEW_VIDEOS,
     ...CLIENT_REVIEW_VIDEOS,
   ];
@@ -110,7 +108,7 @@ export default function Gallery() {
         </div>
 
         {/* ========================================================= */}
-        {/* ROW 2: Client Review Videos (5 Video Reviews)            */}
+        {/* ROW 2: Client Review Videos (11 Real Video Reviews)       */}
         {/* ========================================================= */}
         <div className="space-y-3">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
@@ -125,7 +123,7 @@ export default function Gallery() {
               className="flex gap-6 shrink-0"
               animate={{ x: ['-50%', '0%'] }}
               transition={{
-                duration: 45,
+                duration: 65,
                 repeat: Infinity,
                 ease: 'linear',
               }}
@@ -169,12 +167,17 @@ export default function Gallery() {
                   </div>
 
                   {/* Bottom Gradient Overlay with Client Details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37] via-[#0C2D37]/40 to-transparent flex flex-col justify-end p-5 text-white z-10">
-                    <div className="space-y-1">
-                      <h4 className="text-base font-semibold text-white flex items-center justify-between">
-                        <span>{vid.clientName}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37] via-[#0C2D37]/50 to-transparent flex flex-col justify-end p-5 text-white z-10">
+                    <div className="space-y-0.5">
+                      <h4 className="text-base font-semibold text-white">
+                        {vid.clientName}
                       </h4>
-                     
+                      <p className="text-xs text-[#D49520] font-medium">
+                        {vid.location}
+                      </p>
+                      <p className="text-[11px] text-white/80 line-clamp-1">
+                        {vid.service}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -271,6 +274,7 @@ export default function Gallery() {
               {/* Video Player */}
               <div className="rounded-2xl overflow-hidden bg-black flex items-center justify-center max-h-[62vh]">
                 <video
+                  key={activeModalVideo.videoSrc}
                   src={activeModalVideo.videoSrc}
                   controls
                   autoPlay
