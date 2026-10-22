@@ -149,14 +149,10 @@ export default function Gallery() {
                   <div className="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 z-10">
                     <span className="bg-[#D49520] text-[#0C2D37] text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 border border-white/20">
                       <Play size={10} className="fill-[#0C2D37]" />
-                      <span>Client Review</span>
+                      <span>Client Works</span>
                     </span>
 
-                    <div className="flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-[#FBBC04] border border-white/10">
-                      {[...Array(vid.rating)].map((_, i) => (
-                        <Star key={i} size={11} fill="#FBBC04" stroke="#FBBC04" />
-                      ))}
-                    </div>
+        
                   </div>
 
                   {/* Center Animated Play Button */}
@@ -166,20 +162,7 @@ export default function Gallery() {
                     </div>
                   </div>
 
-                  {/* Bottom Gradient Overlay with Client Details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C2D37] via-[#0C2D37]/50 to-transparent flex flex-col justify-end p-5 text-white z-10">
-                    <div className="space-y-0.5">
-                      <h4 className="text-base font-semibold text-white">
-                        {vid.clientName}
-                      </h4>
-                      <p className="text-xs text-[#D49520] font-medium">
-                        {vid.location}
-                      </p>
-                      <p className="text-[11px] text-white/80 line-clamp-1">
-                        {vid.service}
-                      </p>
-                    </div>
-                  </div>
+
                 </div>
               ))}
             </motion.div>
